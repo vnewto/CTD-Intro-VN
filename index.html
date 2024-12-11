@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Val's Portfolio</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="Geographic Information Systems, GIS, Renewable Energy, Solar, Solar Energy, Javascript, HTML, CSS, Python">
+        <meta name="author" content="Valerie Newton">
+        <meta name="description" content="Valerie Newton's resume, experience, and contact links">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valerie Newton's Portfolio</title>
+    </head>
+
+    <body>
+        <h1>Valerie Newton</h1>
+        <img src="./img/img-collage.jpg" alt="a flower, a computer screen, and solar panels" height="300" width="300">
+        <section id="about">
+            <h2>About</h2>
+            <p>Detail-oriented GIS professional with expertise in spatial data analysis, programming, and renewable energy project development. Proficient in multiple GIS tools with a commitment to continuously enhancing my skills through both classes and hands-on experience. Currently expanding my technical capabilities in programming by taking courses in Javascript, HTML, and CSS. Eagerly seeking an opportunity to apply my spatial analysis and programming skills to support decision-making and drive innovation in the environmental sector.</p>
+        </section>
+        <form action="/action_page.php" method="post">
+            <label for="renewable_energy">What type of renewable energy interests you most?</label>
+            <select name="renewable_energy_dropdown">
+                <option value="solar">Solar</option>
+                <option value="wind">Wind</option>
+                <option value="hydro">Hydro</option>
+                <option value="geothermal">Geothermal</option>
+                <option value="ocean">Ocean</option>
+                <option value="hydrogen">Hydrogen</option>
+                <option value="biomass">Biomass</option>
+                <option value="unsure">I'm not sure!</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <section id="experience">
+            <h2>Experience</h2>
+                <ul>
+                    <li><h3>Certifications and Training</h3></li>
+                        <ul>
+                            <li><em>Javascript, HTML, and CSS (In Progress)</em>: Code the Dream, Expected Completion March 2025</li>
+                            <li><em>Renewable Energy Specialization</em>: Coursera, December 2022</li>
+                            <li><em>Fundamentals of GIS</em>: Coursera, December 2022</li>
+                        </ul>
+                    <li><h3>Technical Skills</h3></li>
+                        <ul>
+                            <li>Geospatial Analysis Software: ArcGIS Pro, ArcGIS Online, ArcGIS Field Maps, Google Earth, Plant Predict, Anderson Optimization</li>
+                            <li>Programming: Javascript, HTML, CSS</li>
+                            <li>Customer Relationship Management Software: Salesforce, Tessitura, Epic</li>
+                            <li>Languages: Spanish Proficiency</li>
+                        </ul>
+                    <li><h3>GIS Analyst at Pine Gate Renewables</h3></li>
+                        <ul>
+                            <li>Utilized spatial analysis techniques to assist with site selection, land acquisition, and project development, contributing to informed decision-making and project success.</li>
+                            <li> Analyzed environmental and geographic datasets to identify viable project sites for utility-scale solar projects and determine potential obstacles.</li>
+                            <li> Created project maps tailored to community engagement, facilitating decision-making processes and fostering local stakeholder involvement in renewable energy initiatives.</li>
+                            <li>Built preliminary models of solar farms using Plant Predict software, ensuring accurate data visualization of all environmental factors.</li>
+                        </ul>
+                    <li><h3>Natural Resources Technician at the North Carolina Museum of Natural Sciences</h3></li>
+                        <ul>
+                            <li>Collected and processed spatial data using GPS and GIS technologies to create interactive maps, ensuring spatial accuracy of all data.</li>
+                            <li>Designed maps for both visitors and educators; included park resources and environmental features, increasing ease of access</li>
+                            <li> Conducted research on local and state renewable energy policies and regulations; synthesized data and prepared feasibility reports for renewable energy projects.</li>
+                        </ul>
+                </ul>
+        </section>
+        <section id="connect">
+            <h2>Connect</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/valerie-newton-a250879b/">LinkedIn</a></li>
+                    <li><a href="https://github.com/vnewto">GitHub</a></li>
+                    <li>
+                        <form action="/action_page.php" method="post">
+                            <label for="message">Send me a message!</label>
+                            <textarea rows="5" columns="25" placeholder="Type your message here"></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </li>
+                </ul>
+        </section>
+    </body>
 </html>
