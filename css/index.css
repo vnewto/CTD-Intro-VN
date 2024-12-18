@@ -1,0 +1,66 @@
+body {
+    background: #E2EAF4;
+    color: #4D6583;
+    font-family: "Noto Sans", serif;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1 {
+    font-family: "Chakra Petch", serif;
+    text-align: center;
+    color: yellow;
+    background-color: #247da7;
+    font-weight: 400;
+}
+
+h2 {
+    color:#384a5f;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+li {
+    font-size: 0.9em;
+}
+
+#about {
+    padding: 1.5em;
+}
+
+#experience {
+    padding: 1.5em;
+}
+
+#connect {
+    padding: 1.5em
+}
+
+.energy-survey {
+    text-align: center;
+    border: solid 1em #43cebc;
+    margin: 2em 3em;
+}
+
+.experience-block {
+    background-color: #247da7;
+    color: #E2EAF4;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+.linkedin li.linkedin-logo {
+    background-image: url("img/linked-in-logo.png");
+    background-repeat: no-repeat;
+}
