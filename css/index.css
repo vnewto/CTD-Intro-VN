@@ -1,6 +1,5 @@
 body {
-    background: #E2EAF4;
-    color: #4D6583;
+    color: black;
     font-family: "Noto Sans", serif;
 }
 
@@ -11,28 +10,39 @@ body {
 }
 
 h1 {
-    font-family: "Chakra Petch", serif;
+    font-family: "Patrick Hand SC", serif;
     text-align: center;
-    color: yellow;
-    background-color: #247da7;
-    font-weight: 400;
+    color: orange;
+    background-color: white;
+    opacity: 0.5;
+    padding: 0.2em;
 }
 
 h2 {
-    color:#384a5f;
+    color:#ecea75;
     font-weight: 700;
+    padding: 0.2em;
 }
 
 h3 {
     font-weight: 500;
+    padding: 0.2em;
 }
 
 p {
     font-size: 0.9em;
+    background-color: white;
+    opacity: 0.5;
+    padding: 1em;
+}
+
+ul {
+    padding: 1em;
 }
 
 li {
     font-size: 0.9em;
+    padding-left: 0.5em;
 }
 
 #about {
@@ -47,20 +57,28 @@ li {
     padding: 1.5em
 }
 
+.connect-section {
+    list-style: none;
+    display: inline block;
+}
+
 .energy-survey {
     text-align: center;
-    border: solid 1em #43cebc;
+    border: solid 0.5em orange;
     margin: 2em 3em;
+    color: rgb(181, 215, 178);
+    padding: 0.5em;
 }
 
 .experience-block {
-    background-color: #247da7;
-    color: #E2EAF4;
+    background-color: white;
+    opacity: 0.6;
+    color: black;
     padding: 0.5em;
     margin: 1em;
+    list-style: none;
 }
 
-.linkedin li.linkedin-logo {
-    background-image: url("img/linked-in-logo.png");
-    background-repeat: no-repeat;
+.connect-logo {
+    max-width: 10%;
 }
