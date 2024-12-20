@@ -1,6 +1,7 @@
 body {
     color: black;
     font-family: "Noto Sans", serif;
+    background-color: darkgreen;
 }
 
 .center {
@@ -12,21 +13,18 @@ body {
 h1 {
     font-family: "Patrick Hand SC", serif;
     text-align: center;
-    color: orange;
-    background-color: white;
-    opacity: 0.5;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 0.2em;
 }
 
 h2 {
     color:#ecea75;
     font-weight: 700;
-    padding: 0.2em;
 }
 
 h3 {
     font-weight: 500;
-    padding: 0.2em;
 }
 
 p {
@@ -42,15 +40,15 @@ ul {
 
 li {
     font-size: 0.9em;
-    padding-left: 0.5em;
+    padding-left: 1.5em;
 }
 
 #about {
-    padding: 1.5em;
+    padding: 1.5em
 }
 
 #experience {
-    padding: 1.5em;
+    padding: 1em;
 }
 
 #connect {
@@ -71,14 +69,13 @@ li {
 }
 
 .experience-block {
-    background-color: white;
-    opacity: 0.6;
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
-    padding: 0.5em;
+    padding: 2em;
     margin: 1em;
     list-style: none;
 }
 
 .connect-logo {
-    max-width: 10%;
+    max-width: 7%;
 }
