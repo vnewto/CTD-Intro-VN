@@ -1,0 +1,198 @@
+/* color palette
+
+SCSS HEX
+$space-cadet: #1C2C4Eff;
+$dark-purple: #221C31ff;
+$prussian-blue: #293851ff;
+$golden-brown: #A5772Bff;
+$tiffany-blue: #73DDD6ff;
+
+
+SCSS RGB
+$space-cadet: rgba(28, 44, 78, 1);
+$dark-purple: rgba(34, 28, 49, 1);
+$prussian-blue: rgba(41, 56, 81, 1);
+$golden-brown: rgba(165, 119, 43, 1);
+$tiffany-blue: rgba(115, 221, 214, 1);  */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2em;
+}
+
+body {
+    color: rgba(34, 28, 49, 1);
+    font-family: "Noto Sans", serif;
+    margin: 0em;
+    background-image: url("img/ocean-view.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* opacity: 0.5; */
+}
+
+h1 {
+    font-family: "Patrick Hand SC", serif;
+    text-align: center;
+    color: rgba(34, 28, 49, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.2em;
+    text-decoration: none;
+}
+
+h2 {
+    color:#1b255e;
+    font-weight: 700;
+    text-shadow: 0 0 0.2em whitesmoke;
+}
+
+h3 {
+    font-weight: 2500;
+}
+
+p {
+    font-size: 0.9em;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: rgba(34, 28, 49, 1);
+    padding: 1em;
+}
+
+ul {
+    padding: 1em;
+}
+
+li {
+    font-size: 0.9em;
+    padding-left: 1.5em;
+}
+
+/* Navigation Menu */
+
+    .nav-menu {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+    .nav-menu-item {
+        color:rgba(34, 28, 49, 1);
+        padding: 1em;
+        text-align: center;
+        text-decoration: none;
+        margin: 0em;
+        float:left;
+        font-weight: 700;
+    }
+
+    /* nav items change color when hovering over */
+    .nav-menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: rgb(139, 100, 38);
+    }
+
+    /* .active {
+        background-color: purple;
+    } */
+
+/* About & Energy Survey Section */
+    #about {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .about-container {
+        border:none;
+    }
+
+    .about-summary {
+        border: none;
+    }
+
+    .energy-survey {
+        text-align: center;
+        margin: 2em;
+        color: rgb(0, 0, 0);
+        background-color: rgba(115, 221, 214, 0.8);
+        border: none;
+        padding: 1em;
+        overflow-x: hidden;
+    }
+
+
+/* Experience section */
+    #experience {
+        padding: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    .experience-container {
+        border: rgba(115, 221, 214, 0.7) solid 3px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+ 
+    .experience-block {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: rgba(34, 28, 49, 1);
+        max-width: 550px;
+        margin: 0.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .date-title {
+        border: orange 2px solid;
+        text-align: center;
+        max-width: 200px;
+        padding-top: auto;
+        padding-bottom: auto;
+    }
+
+    .job-description {
+        border: orange 2px solid;
+        max-width: 300px;
+        margin: 0.5em;
+    }
+
+#skills {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#projects {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* Connect Section */
+
+    #connect {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .connect-container {
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .connect-logo {
+        max-width: 40px;
+        margin: 0.5em;
+    }
+
+
