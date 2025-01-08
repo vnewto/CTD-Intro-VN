@@ -21,15 +21,17 @@ html {
 }
 
 body {
+    font-size: 1em;
     color: rgba(34, 28, 49, 1);
     font-family: "Noto Sans", serif;
-    margin: 0em;
-    background-image: url("img/ocean-view.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-
-    /* opacity: 0.5; */
+    margin: 0;
 }
+
+h1, h2, h3, h4, p, ul, li {
+    margin-top: 0;
+}
+
+/*-------- Typography & Background Styles ----------*/
 
 h1 {
     font-family: "Patrick Hand SC", serif;
@@ -47,11 +49,10 @@ h2 {
 }
 
 h3 {
-    font-weight: 2500;
+    font-weight: 700;
 }
 
 p {
-    font-size: 0.9em;
     background-color: rgb(255, 255, 255, 0.8);
     color: rgba(34, 28, 49, 1);
     padding: 1em;
@@ -66,13 +67,13 @@ li {
     padding-left: 1.5em;
 }
 
-/* Navigation Menu */
+/*----------- Navigation Menu------------ */
 
     .nav-menu {
         margin: 0px;
         padding: 0px;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(115, 221, 214, 1);
         position: sticky;
         top: 0;
         z-index: 1;
@@ -96,16 +97,12 @@ li {
     }
 
     /* nav items change color when hovering over */
-    .nav-menu-item:hover {
+    .nav-menu-item:focus, .nav-menu-item:hover {
         background-color: rgba(255, 255, 255, 0.8);
         color: rgb(139, 100, 38);
     }
 
-    /* .active {
-        background-color: purple;
-    } */
-
-/* About & Energy Survey Section */
+/* ----------- About & Energy Survey Section---------- */
     #about {
         padding: 1.5em;
         margin-bottom: 1.5em;
@@ -130,16 +127,15 @@ li {
     }
 
 
-/* Experience section */
+/*-------------- Experience section ------------*/
     #experience {
         padding: 1em;
         margin-bottom: 1.5em;
     }
 
     .experience-container {
-        border: rgba(115, 221, 214, 0.7) solid 3px;
+
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
     }
  
@@ -155,7 +151,6 @@ li {
     }
 
     .date-title {
-        border: orange 2px solid;
         text-align: center;
         max-width: 200px;
         padding-top: auto;
@@ -163,22 +158,25 @@ li {
     }
 
     .job-description {
-        border: orange 2px solid;
         max-width: 300px;
         margin: 0.5em;
     }
+
+
+/*--------Skills Section--------*/
 
 #skills {
     padding: 1.5em;
     margin-bottom: 1.5em;
 }
 
+/*-----------Projects Sections----------*/
 #projects {
     padding: 1.5em;
     margin-bottom: 1.5em;
 }
 
-/* Connect Section */
+/* ------------ Connect Section ----------*/
 
     #connect {
         padding: 1.5em;
@@ -198,6 +196,13 @@ li {
     footer {
         background: none;
         text-align: center;
+    }
+
+    .author {
+        background: none;
+        color: rgba(34, 28, 49, 1);
+        text-shadow: 0 0 0.2em white;
+        font-size: 0.8em;
     }
 
 
