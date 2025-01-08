@@ -1,12 +1,6 @@
+/* Website designed for laptop/desktop users, and media queries are used for smaller devices */
+
 /* color palette
-
-SCSS HEX
-$space-cadet: #1C2C4Eff;
-$dark-purple: #221C31ff;
-$prussian-blue: #293851ff;
-$golden-brown: #A5772Bff;
-$tiffany-blue: #73DDD6ff;
-
 
 SCSS RGB
 $space-cadet: rgba(28, 44, 78, 1);
@@ -38,7 +32,7 @@ h1 {
     color: rgba(34, 28, 49, 1);
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.2em;
-    text-decoration: none;
+    font-size: 3em;
 }
 
 h2 {
@@ -209,10 +203,23 @@ li {
 /* ---Media Queries for Responsive Design (largest to smallest)---- */
 
 /* tablets */
-@media (width < 1000px) {
+@media (max-width: 1000px) {
     html {
         scroll-behavior: auto;
         scroll-padding-top: 4em;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        color: rgba(34, 28, 49, 1);
+        font-size: 1.5em;
+    }
+
+    ul {
+        padding: 0.5em;
     }
 
     .experience-container {
@@ -227,10 +234,23 @@ li {
 }
 
 /* mobile devices */
-@media (width < 500px) {
+@media (max-width: 500px) {
     html {
         scroll-behavior: auto;
         scroll-padding-top: 6em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        color: rgba(34, 28, 49, 1);
+        font-size: 1.5em;
+    }
+
+    ul {
+        padding: 0.5em;
     }
 
     .experience-container {
