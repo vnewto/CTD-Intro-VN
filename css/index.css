@@ -32,13 +32,14 @@ h1 {
     color: rgba(34, 28, 49, 1);
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.2em;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 h2 {
     color:#1b255e;
     font-weight: 700;
     text-shadow: 0 0 0.2em whitesmoke;
+    font-size: 3em;
 }
 
 h3 {
@@ -56,7 +57,6 @@ ul {
 }
 
 li {
-    font-size: 0.9em;
     padding-left: 1.5em;
 }
 
@@ -113,11 +113,13 @@ li {
     .energy-survey {
         text-align: center;
         margin: 2em;
-        color: rgb(0, 0, 0);
+        color: #1b255e;
         background-color: rgba(115, 221, 214, 0.8);
         border: none;
-        padding: 1em;
+        padding: 2em;
         overflow-x: hidden;
+        font-weight: 700;
+        font-size: 1.5em;
     }
 
 
@@ -206,20 +208,16 @@ li {
 @media (max-width: 1000px) {
     html {
         scroll-behavior: auto;
-        scroll-padding-top: 4em;
     }
 
     h1 {
         font-size: 3em;
+        color:rgb(139, 100, 38);
     }
 
     h2 {
         color: rgba(34, 28, 49, 1);
-        font-size: 1.5em;
-    }
-
-    ul {
-        padding: 0.5em;
+        font-size: 2em;
     }
 
     .experience-container {
@@ -229,7 +227,8 @@ li {
 
     .energy-survey {
         margin: 1em;
-        padding: 0.5em;
+        padding: 1em;
+        font-size: 1.5em;
     }
 }
 
@@ -242,15 +241,12 @@ li {
 
     h1 {
         font-size: 2em;
+        color: black;
     }
 
     h2 {
         color: rgba(34, 28, 49, 1);
         font-size: 1.5em;
-    }
-
-    ul {
-        padding: 0.5em;
     }
 
     .experience-container {
@@ -261,6 +257,7 @@ li {
     .energy-survey {
         margin: 1em;
         padding: 0.5em;
+        font-size: 1em;
     }
 }
 
