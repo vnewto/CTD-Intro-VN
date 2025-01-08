@@ -219,6 +219,14 @@ li {
         color: rgba(34, 28, 49, 1);
         font-size: 2em;
     }
+    
+    #about {
+        background:rgba(139, 100, 38, 0.7)
+    }
+
+    #experience {
+        background: rgba(34, 28, 49,0.51)
+    }
 
     .experience-container {
         justify-content: center;
@@ -247,6 +255,14 @@ li {
     h2 {
         color: rgba(34, 28, 49, 1);
         font-size: 1.5em;
+    }
+
+    #about {
+        background:rgba(34, 28, 49,0.51);
+    }
+
+    #experience {
+        background: rgba(139, 100, 38, 0.7);
     }
 
     .experience-container {
