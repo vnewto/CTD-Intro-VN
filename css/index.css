@@ -1,36 +1,60 @@
-body {
-    color: black;
-    font-family: "Noto Sans", serif;
-    background-color: darkgreen;
+/* color palette
+
+SCSS HEX
+$space-cadet: #1C2C4Eff;
+$dark-purple: #221C31ff;
+$prussian-blue: #293851ff;
+$golden-brown: #A5772Bff;
+$tiffany-blue: #73DDD6ff;
+
+
+SCSS RGB
+$space-cadet: rgba(28, 44, 78, 1);
+$dark-purple: rgba(34, 28, 49, 1);
+$prussian-blue: rgba(41, 56, 81, 1);
+$golden-brown: rgba(165, 119, 43, 1);
+$tiffany-blue: rgba(115, 221, 214, 1);  */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2em;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+body {
+    font-size: 1em;
+    color: rgba(34, 28, 49, 1);
+    font-family: "Noto Sans", serif;
+    margin: 0;
 }
+
+h1, h2, h3, h4, p, ul, li {
+    margin-top: 0;
+}
+
+/*-------- Typography & Background Styles ----------*/
 
 h1 {
     font-family: "Patrick Hand SC", serif;
     text-align: center;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(34, 28, 49, 1);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 0.2em;
+    text-decoration: none;
 }
 
 h2 {
-    color:#ecea75;
+    color:#1b255e;
     font-weight: 700;
+    text-shadow: 0 0 0.2em whitesmoke;
 }
 
 h3 {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 p {
-    font-size: 0.9em;
-    background-color: white;
-    opacity: 0.5;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: rgba(34, 28, 49, 1);
     padding: 1em;
 }
 
@@ -43,39 +67,142 @@ li {
     padding-left: 1.5em;
 }
 
-#about {
-    padding: 1.5em
+/*----------- Navigation Menu------------ */
+
+    .nav-menu {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        background-color: rgba(115, 221, 214, 1);
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+    .nav-menu-item {
+        color:rgba(34, 28, 49, 1);
+        padding: 1em;
+        text-align: center;
+        text-decoration: none;
+        margin: 0em;
+        float:left;
+        font-weight: 700;
+    }
+
+    /* nav items change color when hovering over */
+    .nav-menu-item:focus, .nav-menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: rgb(139, 100, 38);
+    }
+
+/* ----------- About & Energy Survey Section---------- */
+    #about {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .about-container {
+        border:none;
+    }
+
+    .about-summary {
+        border: none;
+    }
+
+    .energy-survey {
+        text-align: center;
+        margin: 2em;
+        color: rgb(0, 0, 0);
+        background-color: rgba(115, 221, 214, 0.8);
+        border: none;
+        padding: 1em;
+        overflow-x: hidden;
+    }
+
+
+/*-------------- Experience section ------------*/
+    #experience {
+        padding: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    .experience-container {
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+ 
+    .experience-block {
+        background-color: rgba(255, 255, 255, 0.7);
+        color: rgba(34, 28, 49, 1);
+        max-width: 550px;
+        margin: 0.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .date-title {
+        text-align: center;
+        max-width: 200px;
+        padding-top: auto;
+        padding-bottom: auto;
+    }
+
+    .job-description {
+        max-width: 300px;
+        margin: 0.5em;
+    }
+
+
+/*--------Skills Section--------*/
+
+#skills {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
 }
 
-#experience {
-    padding: 1em;
+/*-----------Projects Sections----------*/
+#projects {
+    padding: 1.5em;
+    margin-bottom: 1.5em;
 }
 
-#connect {
-    padding: 1.5em
-}
+/* ------------ Connect Section ----------*/
 
-.connect-section {
-    list-style: none;
-    display: inline block;
-}
+    #connect {
+        padding: 1.5em;
+        margin-bottom: 1.5em;
+    }
 
-.energy-survey {
-    text-align: center;
-    border: solid 0.5em orange;
-    margin: 2em 3em;
-    color: rgb(181, 215, 178);
-    padding: 0.5em;
-}
+    .connect-container {
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
 
-.experience-block {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
-    padding: 2em;
-    margin: 1em;
-    list-style: none;
-}
+    .connect-logo {
+        max-width: 40px;
+        margin: 0.5em;
+    }
 
-.connect-logo {
-    max-width: 7%;
-}
+    footer {
+        background: none;
+        text-align: center;
+    }
+
+    .author {
+        background: none;
+        color: rgba(34, 28, 49, 1);
+        text-shadow: 0 0 0.2em white;
+        font-size: 0.8em;
+    }
+
+
