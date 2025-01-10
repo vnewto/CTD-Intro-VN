@@ -16,7 +16,6 @@ html {
 }
 
 body {
-    font-size: 1em;
     color: rgba(34, 28, 49, 1);
     font-family: "Noto Sans", serif;
     margin: 0;
@@ -26,20 +25,25 @@ h1, h2, h3, h4, p, ul, li {
     margin: 0;
 }
 
+section {
+    margin: 0 auto;
+    max-width: 1300px;
+    border: 2px solid green;
+}
+
 h1 {
     font-family: "Patrick Hand SC", serif;
     text-align: center;
     color: rgba(34, 28, 49, 1);
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 0.2em;
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 h2 {
     color:#1b255e;
     font-weight: 700;
     text-shadow: 0 0 0.2em whitesmoke;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 h3 {
@@ -84,7 +88,7 @@ li {
         padding: 1em;
         text-align: center;
         text-decoration: none;
-        margin: 0em;
+        margin: 0;
         float:left;
         font-weight: 700;
     }
@@ -98,7 +102,6 @@ li {
 /* ----------- About & Energy Survey Section---------- */
     #about {
         padding: 1.5em;
-        margin: 0;
         margin-bottom: 1.5em;
     }
 
@@ -119,7 +122,7 @@ li {
         padding: 2em;
         overflow-x: hidden;
         font-weight: 700;
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
 
@@ -141,14 +144,15 @@ li {
         max-width: 550px;
         margin: 0.5em;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
+    /* Children of experience-block */
     .date-title {
         text-align: center;
         max-width: 200px;
-        border: solid magenta 2px;
         margin: 0;
         padding: 1em;
     }
@@ -198,8 +202,9 @@ li {
     .author {
         background: none;
         color: rgba(34, 28, 49, 1);
-        text-shadow: 0 0 0.2em white;
-        font-size: 0.8em;
+        text-shadow: 0 0 0.2em rgba(115, 221, 214, 1);
+        font-size: 0.8rem;
+        font-weight: 700;
     }
 
 /* ---Media Queries for Responsive Design (largest to smallest)---- */
@@ -211,13 +216,13 @@ li {
     }
 
     h1 {
-        font-size: 3em;
+        font-size: 3rem;
         color:rgb(139, 100, 38);
     }
 
     h2 {
         color: rgba(34, 28, 49, 1);
-        font-size: 2em;
+        font-size: 2rem;
     }
     
     #about {
@@ -236,7 +241,7 @@ li {
     .energy-survey {
         margin: 1em;
         padding: 1em;
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 }
 
@@ -248,13 +253,13 @@ li {
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 2rem;
         color: black;
     }
 
     h2 {
         color: rgba(34, 28, 49, 1);
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     #about {
@@ -273,7 +278,7 @@ li {
     .energy-survey {
         margin: 1em;
         padding: 0.5em;
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 
