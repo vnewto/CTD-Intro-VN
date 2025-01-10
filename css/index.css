@@ -1,12 +1,6 @@
+/* Website designed for laptop/desktop users, and media queries are used for smaller devices */
+
 /* color palette
-
-SCSS HEX
-$space-cadet: #1C2C4Eff;
-$dark-purple: #221C31ff;
-$prussian-blue: #293851ff;
-$golden-brown: #A5772Bff;
-$tiffany-blue: #73DDD6ff;
-
 
 SCSS RGB
 $space-cadet: rgba(28, 44, 78, 1);
@@ -15,6 +9,7 @@ $prussian-blue: rgba(41, 56, 81, 1);
 $golden-brown: rgba(165, 119, 43, 1);
 $tiffany-blue: rgba(115, 221, 214, 1);  */
 
+/*-------- Typography & Background Styles ----------*/
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 2em;
@@ -28,10 +23,8 @@ body {
 }
 
 h1, h2, h3, h4, p, ul, li {
-    margin-top: 0;
+    margin: 0;
 }
-
-/*-------- Typography & Background Styles ----------*/
 
 h1 {
     font-family: "Patrick Hand SC", serif;
@@ -39,13 +32,14 @@ h1 {
     color: rgba(34, 28, 49, 1);
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0.2em;
-    text-decoration: none;
+    font-size: 4em;
 }
 
 h2 {
     color:#1b255e;
     font-weight: 700;
     text-shadow: 0 0 0.2em whitesmoke;
+    font-size: 3em;
 }
 
 h3 {
@@ -63,7 +57,6 @@ ul {
 }
 
 li {
-    font-size: 0.9em;
     padding-left: 1.5em;
 }
 
@@ -105,6 +98,7 @@ li {
 /* ----------- About & Energy Survey Section---------- */
     #about {
         padding: 1.5em;
+        margin: 0;
         margin-bottom: 1.5em;
     }
 
@@ -119,11 +113,13 @@ li {
     .energy-survey {
         text-align: center;
         margin: 2em;
-        color: rgb(0, 0, 0);
+        color: #1b255e;
         background-color: rgba(115, 221, 214, 0.8);
         border: none;
-        padding: 1em;
+        padding: 2em;
         overflow-x: hidden;
+        font-weight: 700;
+        font-size: 1.5em;
     }
 
 
@@ -147,19 +143,20 @@ li {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-content: center;
     }
 
     .date-title {
         text-align: center;
         max-width: 200px;
-        padding-top: auto;
-        padding-bottom: auto;
+        border: solid magenta 2px;
+        margin: 0;
+        padding: 1em;
     }
 
     .job-description {
         max-width: 300px;
-        margin: 0.5em;
+        margin: 1em;
+        padding: 1em;
     }
 
 
@@ -204,5 +201,80 @@ li {
         text-shadow: 0 0 0.2em white;
         font-size: 0.8em;
     }
+
+/* ---Media Queries for Responsive Design (largest to smallest)---- */
+
+/* tablets */
+@media (max-width: 1000px) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    h1 {
+        font-size: 3em;
+        color:rgb(139, 100, 38);
+    }
+
+    h2 {
+        color: rgba(34, 28, 49, 1);
+        font-size: 2em;
+    }
+    
+    #about {
+        background:rgba(139, 100, 38, 0.7)
+    }
+
+    #experience {
+        background: rgba(34, 28, 49,0.51)
+    }
+
+    .experience-container {
+        justify-content: center;
+        padding: 0.5em;
+    }
+
+    .energy-survey {
+        margin: 1em;
+        padding: 1em;
+        font-size: 1.5em;
+    }
+}
+
+/* mobile devices */
+@media (max-width: 500px) {
+    html {
+        scroll-behavior: auto;
+        scroll-padding-top: 6em;
+    }
+
+    h1 {
+        font-size: 2em;
+        color: black;
+    }
+
+    h2 {
+        color: rgba(34, 28, 49, 1);
+        font-size: 1.5em;
+    }
+
+    #about {
+        background:rgba(34, 28, 49,0.51);
+    }
+
+    #experience {
+        background: rgba(139, 100, 38, 0.7);
+    }
+
+    .experience-container {
+        justify-content: center;
+        padding: 0.5em;
+    }
+
+    .energy-survey {
+        margin: 1em;
+        padding: 0.5em;
+        font-size: 1em;
+    }
+}
 
 
