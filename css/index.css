@@ -1,280 +1,239 @@
-/* Website designed for laptop/desktop users, and media queries are used for smaller devices */
-
-/* color palette
-
-SCSS RGB
-$space-cadet: rgba(28, 44, 78, 1);
-$dark-purple: rgba(34, 28, 49, 1);
-$prussian-blue: rgba(41, 56, 81, 1);
-$golden-brown: rgba(165, 119, 43, 1);
-$tiffany-blue: rgba(115, 221, 214, 1);  */
-
-/*-------- Typography & Background Styles ----------*/
 html {
+    margin: 0;
+    background:rgba(34, 28, 49, 1);
     scroll-behavior: smooth;
-    scroll-padding-top: 2em;
+    scroll-padding-top: 3em;
 }
 
 body {
-    font-size: 1em;
-    color: rgba(34, 28, 49, 1);
-    font-family: "Noto Sans", serif;
     margin: 0;
+    font-family: "Lato", serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(115, 221, 214, 1);
 }
 
-h1, h2, h3, h4, p, ul, li {
-    margin: 0;
+/* ===========
+Typography 
+============*/
+
+/* Color Palette:
+$light brown: rgba(205, 176, 113, 1);
+$light green: rgba(120, 165, 135, 1);
+$dark blue: rgba(21, 30, 66, 1);
+$grey-blue: rgba(39, 82, 107, 1);
+$aqua: rgba(115, 221, 214, 1);
+dark-purple rgba (34, 28, 49, 1) 
+
+$space-cadet: rgba(29, 33, 64, 1);
+$dark-cyan: rgba(44, 138, 138, 1);
+$tea-green: rgba(208, 230, 181, 1);
+$celeste: rgba(161, 244, 249, 1);*/
+
+h1,
+h2,
+h3,
+h4 {
+    color: rgba(205, 176, 113, 1)
 }
 
 h1 {
-    font-family: "Patrick Hand SC", serif;
     text-align: center;
-    color: rgba(34, 28, 49, 1);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0.2em;
-    font-size: 4em;
+    margin: 0 auto;
+    font-family: "Playwrite AU SA", serif;
+    font-weight: 400;
+    padding-top: 0.5em;
 }
 
 h2 {
-    color:#1b255e;
-    font-weight: 700;
-    text-shadow: 0 0 0.2em whitesmoke;
-    font-size: 3em;
+    font-weight: 800;
 }
 
 h3 {
     font-weight: 700;
 }
 
-p {
-    background-color: rgb(255, 255, 255, 0.8);
-    color: rgba(34, 28, 49, 1);
-    padding: 1em;
+h4 {
+    font-style: italic;
+    font-size: 1rem;
 }
 
-ul {
-    padding: 1em;
+.survey-container, .gis-info {
+   color: rgba(115, 221, 214, 1);
 }
 
-li {
-    padding-left: 1.5em;
-}
 
-/*----------- Navigation Menu------------ */
+/* =========
+Layout
+============= */
 
-    .nav-menu {
-        margin: 0px;
-        padding: 0px;
+
+/* =====Nav Menu===== */
+    nav {
+        background-color: rgba(34, 28, 49, 1);
+        margin: 0;
+        padding: 0;
         width: 100%;
-        background-color: rgba(115, 221, 214, 1);
-        position: sticky;
         top: 0;
         z-index: 1;
+        position: sticky;
+        border-bottom: solid 3px rgba(205, 176, 113, 1);
     }
 
-    .nav-menu ul {
+    nav ul {
         list-style: none;
-        padding: 0px;
-        margin: 0px;
+        padding: 1em 0;
+        margin: 0;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-menu-item {
-        color:rgba(34, 28, 49, 1);
-        padding: 1em;
-        text-align: center;
+        margin: 1em;
         text-decoration: none;
-        margin: 0em;
-        float:left;
-        font-weight: 700;
+        color: rgba(115, 221, 214, 1);
     }
 
-    /* nav items change color when hovering over */
     .nav-menu-item:focus, .nav-menu-item:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-        color: rgb(139, 100, 38);
+        color: rgba(205, 176, 113, 1);
+        font-weight: 600;
     }
 
-/* ----------- About & Energy Survey Section---------- */
-    #about {
-        padding: 1.5em;
-        margin: 0;
-        margin-bottom: 1.5em;
+    .connect-logo {
+        min-width: 20px;
+        max-width: 75px;
     }
 
-    .about-container {
-        border:none;
+    @media (max-width: 800px) {
+        /* name on left, menu on right? */
     }
 
-    .about-summary {
-        border: none;
-    }
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+        }
+    } /* /==== end Nav Menu */
 
-    .energy-survey {
-        text-align: center;
-        margin: 2em;
-        color: #1b255e;
-        background-color: rgba(115, 221, 214, 0.8);
-        border: none;
-        padding: 2em;
-        overflow-x: hidden;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
+.header-image {
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+    border-top: solid 3px rgba(205, 176, 113, 1);
+    border-bottom: solid 6px rgba(205, 176, 113, 1);
+}
 
 
-/*-------------- Experience section ------------*/
-    #experience {
-        padding: 1em;
-        margin-bottom: 1.5em;
-    }
 
-    .experience-container {
+/* =======main grid layout===== */
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0 3fr 1fr 0;
+    grid-template-areas: 
+        " . about sidebar . "
+        " . experience sidebar . "
+        " . skills sidebar . "
+        " . projects sidebar . "
+        " . connect sidebar . ";
+    grid-gap: 1em 1em;
+}
+
+.grid-about {
+    grid-area: about;
+    max-height: 200px;
+}
+
+.grid-experience {
+    grid-area: experience;
+}
+
+    /* Flex Layout for Experience Section */
+    .experience-flex {
         display: flex;
         flex-wrap: wrap;
     }
- 
+
     .experience-block {
-        background-color: rgba(255, 255, 255, 0.7);
-        color: rgba(34, 28, 49, 1);
-        max-width: 550px;
-        margin: 0.5em;
+        max-width: 325px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        margin: 0.7em;
+        padding: 1.5em 2em;
+        background: rgba(115, 221, 214, 0.1);
     }
 
     .date-title {
-        text-align: center;
-        max-width: 200px;
-        border: solid magenta 2px;
+        text-align: left;
         margin: 0;
-        padding: 1em;
+        padding-bottom: 1em;
+        /* border: solid yellow 2px; */
+    }
+
+    .experience-title {
+        margin: 0;
+        margin-bottom: 0.2em;
+    }
+
+    .experience-date {
+        margin: 0;
     }
 
     .job-description {
         max-width: 300px;
-        margin: 1em;
+        margin: 0;
+        /* border: solid red 2px; */
+    } /* / end flex layout for Experience section */
+
+.grid-skills {
+    grid-area: skills;
+}
+
+.grid-projects {
+    grid-area: projects;
+}
+
+.grid-connect {
+    grid-area: connect;
+}
+
+/* Flex layout for sidebar */
+    .sidebar {
+        grid-area: sidebar;
+        padding: 1em;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .gis-info, .survey-container {
+        background:rgba(205, 176, 113, 0.15);
+        margin-bottom: 2em;
         padding: 1em;
     }
 
 
-/*--------Skills Section--------*/
-
-#skills {
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-/*-----------Projects Sections----------*/
-#projects {
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-/* ------------ Connect Section ----------*/
-
-    #connect {
-        padding: 1.5em;
-        margin-bottom: 1.5em;
-    }
-
-    .connect-container {
-        display: flex;
-        background-color: rgba(255, 255, 255, 0.7);
-    }
-
-    .connect-logo {
-        max-width: 40px;
-        margin: 0.5em;
-    }
-
-    footer {
-        background: none;
-        text-align: center;
-    }
-
-    .author {
-        background: none;
-        color: rgba(34, 28, 49, 1);
-        text-shadow: 0 0 0.2em white;
-        font-size: 0.8em;
-    }
-
-/* ---Media Queries for Responsive Design (largest to smallest)---- */
-
-/* tablets */
-@media (max-width: 1000px) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    h1 {
-        font-size: 3em;
-        color:rgb(139, 100, 38);
-    }
-
-    h2 {
-        color: rgba(34, 28, 49, 1);
-        font-size: 2em;
+/* ===================
+Media Queries (largest to smallest screen size)
+====================== */
+@media (max-width: 800px) {
+    nav li {
+        margin-bottom: 0.5em;
     }
     
-    #about {
-        background:rgba(139, 100, 38, 0.7)
-    }
-
-    #experience {
-        background: rgba(34, 28, 49,0.51)
-    }
-
-    .experience-container {
-        justify-content: center;
-        padding: 0.5em;
-    }
-
-    .energy-survey {
-        margin: 1em;
-        padding: 1em;
-        font-size: 1.5em;
+    .container {
+        grid-template-columns: 0em auto 0em;
+        grid-template-areas: 
+            " . about . "
+            " . sidebar . "
+            " . experience . "
+            " . skills . "
+            " . projects . "
+            " . connect . ";
     }
 }
-
-/* mobile devices */
-@media (max-width: 500px) {
-    html {
-        scroll-behavior: auto;
-        scroll-padding-top: 6em;
-    }
-
-    h1 {
-        font-size: 2em;
-        color: black;
-    }
-
-    h2 {
-        color: rgba(34, 28, 49, 1);
-        font-size: 1.5em;
-    }
-
-    #about {
-        background:rgba(34, 28, 49,0.51);
-    }
-
-    #experience {
-        background: rgba(139, 100, 38, 0.7);
-    }
-
-    .experience-container {
-        justify-content: center;
-        padding: 0.5em;
-    }
-
-    .energy-survey {
-        margin: 1em;
-        padding: 0.5em;
-        font-size: 1em;
-    }
-}
-
-
