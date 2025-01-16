@@ -238,6 +238,7 @@ $golden-brown: rgba(205, 176, 113, 1)
     
     h2 {
         color: rgba(205, 176, 113, 1);
+        margin-bottom: 0.5em;
     }
 
     h3, h4 {
@@ -282,6 +283,10 @@ $golden-brown: rgba(205, 176, 113, 1)
             " . connect . ";
     }
 
+    .connect-logo {
+        max-width: 40px;
+    }
+
 
 /* Phone */
 @media (max-width: 600px) {
@@ -312,8 +317,21 @@ $golden-brown: rgba(205, 176, 113, 1)
         text-align: center;
     }
 
+    .survey-container,
+    .gis-info {
+        padding: 0.5em;
+    }
+
+    .h3-sidebar {
+        margin-bottom: 0.5em;
+    }
+
     .experience-flex {
         justify-content: center;
+    }
+
+    .experience-block {
+        padding: 0.8em;
     }
 };
 
