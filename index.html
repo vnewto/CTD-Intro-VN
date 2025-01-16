@@ -6,11 +6,11 @@
     <meta name="keywords" content="Geographic Information Systems, GIS, Renewable Energy, Solar, Solar Energy, Javascript, HTML, CSS, Python">
     <meta name="author" content="Valerie Newton">
     <meta name="description" content="Valerie Newton's resume, experience, and contact links">
-    <link href="css/index.css" rel="stylesheet">
+    <title>Valerie Newton's Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
-    <title>Valerie Newton's Portfolio</title>
+    <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,15 +46,15 @@
         <div class="sidebar">
 
             <!-- GIS Info -->
-            <div class="gis-info">
-                <h3>What is GIS?</h3>
-                <p>GIS stands for Geographical Information Systems.</p>
+            <div class="grid-item gis-info">
+                <h3 class="h3-sidebar">What is GIS?</h3>
+                <p class="p-sidebar">GIS stands for Geographical Information Systems, which are systems that analyze, manipulate, and and visualize any location-based data.</p>
             </div>
 
             <!-- Energy Survey -->
             <div class="grid-item survey-container">
                 <form class="energy-survey grid-energy-survey" action="/action_page.php" method="post">
-                    <label for="renewable_energy">What type of renewable energy interests you most?</label>
+                    <label for="renewable_energy"><h3 class="h3-sidebar">What type of renewable energy interests you most?</h3></label>
                     <select name="renewable_energy_dropdown">
                         <option value="solar">Solar</option>
                         <option value="wind">Wind</option>
@@ -128,6 +128,7 @@
          ============ -->
         <div class="grid-item grid-skills" id="skills">
             <h2>Skills</h2>
+            <ul></ul>
         </div> <!-- / Skills section -->
 
 
@@ -156,6 +157,11 @@
                     
         </div>
     </div>
+
+    <a href="test.html">link to test page</a>
+
+    <!-- Link to JavaScript File -->
+    <script src="js\index.js"></script>
 
 </body>
 
