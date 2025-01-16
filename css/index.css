@@ -221,28 +221,54 @@ Layout
 Media Queries (largest to smallest screen size)
 ====================== */
 
+/* $moonstone blue: rgba(67, 188, 211, 1);
+$vanilla: rgba(249, 235, 181, 1);
+$golden-brown: rgba(205, 176, 113, 1)
+ */
+
 /* Tablet */
 @media (max-width: 900px) {
     html {
         scroll-behavior: auto;
     }
+
+    body, h1 {
+        color: rgba(67, 188, 211, 1);
+    }
     
+    h2 {
+        color: rgba(205, 176, 113, 1);
+    }
+
+    h3, h4 {
+        color: rgba(249, 235, 181, 1);
+    }
+
     h1 {
         padding: 0;
         margin-bottom: -0.3em;
     }
 
+    nav {
+        border-bottom: solid 2px rgba(249, 235, 181, 1);
+    }
+
     nav ul {
         padding: 1em;
     }
-    
-    nav {
-        border-bottom: solid 2px rgba(205, 176, 113, 1);
+
+    .nav-menu-item, 
+    .h3-sidebar {
+       color: rgba(249, 235, 181, 1);
+    }
+
+    .nav-menu-item:focus, .nav-menu-item:hover {
+        color: rgba(67, 188, 211, 1);
     }
 
     .header-image {
-        border-top: solid 2px rgba(205, 176, 113, 1);
-        border-bottom: solid 4px rgba(205, 176, 113, 1);
+        border-top: solid 2px rgba(249, 235, 181, 1);
+        border-bottom: solid 4px rgba(249, 235, 181, 1);
     }
     
     .container {
@@ -255,6 +281,7 @@ Media Queries (largest to smallest screen size)
             " . projects . "
             " . connect . ";
     }
+
 
 /* Phone */
 @media (max-width: 600px) {
@@ -279,6 +306,15 @@ Media Queries (largest to smallest screen size)
         border-top: 1px solid rgba(205, 176, 113, 1);
         border-bottom: solid 2px rgba(205, 176, 113, 1);
     }
-}
+
+    .sidebar {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .experience-flex {
+        justify-content: center;
+    }
+};
 
 }
