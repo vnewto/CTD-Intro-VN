@@ -16,19 +16,21 @@
 </head>
 
 <body>
-    <header>
-        <h1>Valerie Newton</h1>
-    </header>
+    <div class="header-container">
+        <header>
+            <h1>Valerie Newton</h1>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about" class="nav-menu-item">About</a></li>
-            <li><a href="#experience" class="nav-menu-item">Experience</a></li>
-            <li><a href="#skills" class="nav-menu-item">Skills</a></li>
-            <li><a href="#projects" class="nav-menu-item">Projects</a></li>
-            <li><a href="#connect" class="nav-menu-item">Connect</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-menu-item">About</a></li>
+                <li><a href="#experience" class="nav-menu-item">Experience</a></li>
+                <li><a href="#skills" class="nav-menu-item">Skills</a></li>
+                <li><a href="#projects" class="nav-menu-item">Projects</a></li>
+                <li><a href="#connect" class="nav-menu-item">Connect</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <img class="header-image" src="img\ocean-view.jpg" alt="aerial map of a dark blue ocean with rocky land">
 
@@ -57,16 +59,35 @@
             <div class="grid-item survey-container">
                 <form class="energy-survey grid-energy-survey" action="/action_page.php" method="post">
                     <label for="renewable_energy"><h3 class="h3-sidebar">What type of renewable energy interests you most?</h3></label>
-                    <select name="renewable_energy_dropdown">
-                        <option value="solar">Solar</option>
-                        <option value="wind">Wind</option>
-                        <option value="hydro">Hydro</option>
-                        <option value="geothermal">Geothermal</option>
-                        <option value="ocean">Ocean</option>
-                        <option value="hydrogen">Hydrogen</option>
-                        <option value="biomass">Biomass</option>
-                    </select>
-                    <button type="submit">Submit</button>
+                    <div class="survey-option">
+                        <input type="radio" id="solar" name="energy_interest" value="solar">
+                        <label for="solar">Solar</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="wind" name="energy_interest" value="wind">
+                        <label for="wind">Wind</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="hydro" name="energy_interest" value="hydro">
+                        <label for="hydro">Hydro</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="geothermal" name="energy_interest" value="geothermal">
+                        <label for="geothermal">Geothermal</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="ocean" name="energy_interest" value="ocean">
+                        <label for="ocean">Ocean</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="hydrogen" name="energy_interest" value="hydrogen">
+                        <label for="hydrogen">Hydrogen</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="biomass" name="energy_interest" value="biomass">
+                        <label for="biomass">Biomass</label>
+                    </div>
+                    <button type="submit" class="survey-btn">Submit</button>
                 </form>
             </div> <!-- / Energy Survey -->
 
@@ -159,8 +180,6 @@
                     
         </div>
     </div>
-
-    <a href="test.html">link to test page</a>
 
     <!-- Link to JavaScript File -->
     <script src="js\index.js"></script>
