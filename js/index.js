@@ -13,7 +13,7 @@ const skills = ["JavaScript", "HTML", "CSS", "Geographic Information Systems", "
 const skillsSection = document.querySelector("#skills");
 
 const skillsList = skillsSection.querySelector("ul");
-// skillsList.classList.add("skillsBullets");
+skillsList.classList.add(["skills-bullets"]);
 
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement("li");

@@ -8,7 +8,6 @@ html {
 body {
     margin: 0;
     font-family: "Lato", serif;
-    font-size: 1rem;
     font-weight: 400;
     font-style: normal;
     color: rgba(115, 221, 214, 1);
@@ -156,7 +155,6 @@ Layout
 
 .grid-about {
     grid-area: about;
-    max-height: 200px;
 }
 
 .grid-experience {
@@ -194,7 +192,6 @@ Layout
     }
 
     .job-description {
-        max-width: 300px;
         margin: 0;
         /* border: solid red 2px; */
     } /* / end flex layout for Experience section */
@@ -208,12 +205,11 @@ Layout
     #skills ul {
         display: flex;
         flex-wrap: wrap;
-        list-style-image: url("img\check_small_aqua.png");
         padding: 1.5em;
         background:rgba(205, 176, 113, 0.15);
         border-radius: 10px;
-        list-style: none;
         justify-content: space-evenly;
+        list-style: none;
     }
 
     #skills li {
@@ -273,17 +269,8 @@ $golden-brown: rgba(205, 176, 113, 1)
         color: rgba(67, 188, 211, 1);
     }
 
-    .header-container {
-        display: flex;
-        /* justify-content: space-between; */
-    }
-
     .nav-menu-item {
         margin: 1em 0.5em;
-    }
-
-    h1 {
-        font-size: 1.2rem;
     }
     
     h2 {
@@ -355,6 +342,8 @@ $golden-brown: rgba(205, 176, 113, 1)
         max-width: 40px;
     }
 
+}
+
 
 /* Phone */
 @media (max-width: 600px) {
@@ -381,7 +370,7 @@ $golden-brown: rgba(205, 176, 113, 1)
     }
 
     .sidebar {
-        margin-top: 2em;
+        margin-top: 3em;
     }
 
     .survey-container,
@@ -415,4 +404,22 @@ $golden-brown: rgba(205, 176, 113, 1)
     }
 };
 
-}
+
+/* ================
+ GOALS/Bugs
+ ================= -->
+
+ <!-- 
+ - can't get gitbash to work, have to use terminal
+ - At tablet size, justify-content isn't working for the flexbox - and why is my name not on one line
+ - Putting the nav and h1 in a div broke the stickiness of the nav bar
+ - When shrunk or when font increased to 2rem (for accessibility), the experience section and the Survey-container overlap. Also the font size didn't change on everything
+ - Wasn't able to add a picture bullet to the skills section
+ - Job-descriptions in experience blocks of experience section aren't changing width
+ - couldn't figure out how to get a class name to work in js and then use it in css
+
+ Goal: make hamburger menu for phone screen-size and change "Valerie Newton" to "VN" kind of like a logo (make it as a li item of the nav ul?)
+ Goal: Make a chart of some sort so that when you submit the energy survey, it posts everyone's answers right below it
+ Goal: Change connect logos so they are all one color
+ Goal: Toggle between light/dark color scheme
+ */
