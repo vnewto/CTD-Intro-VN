@@ -55,7 +55,7 @@ function handleSubmit(event) {
     let messageSection = document.querySelector("#messages");
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    newMessage.textContent = usersMessage;
+    newMessage.innerHTML = <a>${usersName}</a> + <span>${usersMessage}</span>;
 
     //create remove & edit buttons
     const removeButton = document.createElement("button");
@@ -63,7 +63,7 @@ function handleSubmit(event) {
     removeButton.type = "button";
     removeButton.addEventListener("click", handleRemove);
     function handleRemove(event) {
-        let entry = document.getElementById("button").parentNode.nodeName;
+        let entry = event.currentTarget.parentNode.nodeName;
         entry.remove();
     }
     newMessage.appendChild(removeButton);
