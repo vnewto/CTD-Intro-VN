@@ -148,7 +148,9 @@ Layout
         " . experience sidebar . "
         " . skills sidebar . "
         " . projects sidebar . "
-        " . connect sidebar . ";
+        " . connect sidebar . "
+        " . message-form sidebar . "
+        " . message-board sidebar . ";
     grid-gap: 0.5em 0.5em;
     padding: 0 1em;
 }
@@ -197,7 +199,6 @@ Layout
 
     .job-description {
         margin: 0;
-        /* border: solid red 2px; */
     } /* / end flex layout for Experience section */
 
 .grid-skills {
@@ -238,6 +239,14 @@ Layout
 
 .connect-logo {
     margin: 0 0.5em;
+}
+
+.grid-message-form {
+    grid-area: message-form;
+}
+
+.grid-message-board {
+    grid-area: message-board;
 }
 
 /* Flex layout for sidebar */
@@ -325,7 +334,9 @@ Media Queries (largest to smallest screen size)
             " . experience . "
             " . skills . "
             " . projects . "
-            " . connect . ";
+            " . connect . "
+            " . message-form ."
+            " . message-board . ";
     }
 
     .sidebar {
@@ -363,18 +374,27 @@ Media Queries (largest to smallest screen size)
         padding-top: 0.3em;
         color: rgba(115, 221, 214, 1);
     }
+
+    nav {
+        border-bottom: solid 2px rgba(205, 176, 113, 1);
+    }
     
     nav ul {
         flex-direction: column;
+        padding: 0.2em;
     }
 
     nav li {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.3em;
     }
     
     .header-image {
         border-top: 2px solid rgba(205, 176, 113, 1);
         border-bottom: solid 2px rgba(205, 176, 113, 1);
+    }
+
+    .container {
+        padding: 0.2em;
     }
 
     .sidebar {

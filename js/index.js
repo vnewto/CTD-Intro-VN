@@ -2,9 +2,9 @@
 //create alert for survey button
 const surveyBtn = document.querySelector(".survey-btn");
 function alertThanks() {
-    alert("Thanks for your submission!")
+    alert("Thanks for your submission!");
 }
-surveyBtn.addEventListener("click", alertThanks)
+surveyBtn.addEventListener("click", alertThanks);
 
 
 //create list of Skills
@@ -35,3 +35,49 @@ const copyright = document.createElement("p");
 copyright.textContent = "\u00A9 Valerie Newton " + thisYear;
 
 footer.appendChild(copyright);
+
+
+//Set up a Message Board
+const messageForm = document.forms["leave_message"];
+messageForm.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+    //prevent page from refreshing upon form submission
+    event.preventDefault();
+
+    //create variables for each form input
+    let usersName = event.target.usersName.value;
+    let usersEmail = event.target.usersEmail.value;
+    let usersMessage = event.target.usersMessage.value;
+    console.log(usersName, usersEmail, usersMessage);
+
+    //create variables to display messages
+    let messageSection = document.querySelector("#messages");
+    let messageList = messageSection.querySelector("ul");
+    let newMessage = document.createElement("li");
+    newMessage.textContent = usersMessage;
+
+    //create remove & edit buttons
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.type = "button";
+    removeButton.addEventListener("click", handleRemove);
+    function handleRemove(event) {
+        let entry = document.getElementById("button").parentNode.nodeName;
+        entry.remove();
+    }
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+
+    // const editButton = document.createElement("button");
+    // editButton.textContent = "Edit";
+    // editButton.type = "button";
+    // editButton.addEventListener("click", handleEdit);
+    // function handleEdit(event) {
+    //     let messageText = 
+    // }
+
+    //clear form after use
+    messageForm.reset();
+}
+
