@@ -22,8 +22,8 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 //Create footer and add it to the body
-const body = document.querySelector("body");
 const footer = document.createElement("footer");
+const body = document.querySelector("body");
 body.appendChild(footer);
 
 
