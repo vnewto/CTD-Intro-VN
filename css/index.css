@@ -1,280 +1,433 @@
-/* Website designed for laptop/desktop users, and media queries are used for smaller devices */
+/* Designed as desktop-first layout with media queries sizing down to tablet and phone */
 
-/* color palette
 
-SCSS RGB
-$space-cadet: rgba(28, 44, 78, 1);
-$dark-purple: rgba(34, 28, 49, 1);
-$prussian-blue: rgba(41, 56, 81, 1);
-$golden-brown: rgba(165, 119, 43, 1);
-$tiffany-blue: rgba(115, 221, 214, 1);  */
-
-/*-------- Typography & Background Styles ----------*/
 html {
+    margin: 0;
+    background:rgba(34, 28, 49, 1);
     scroll-behavior: smooth;
-    scroll-padding-top: 2em;
+    scroll-padding-top: 4em;
 }
 
 body {
-    font-size: 1em;
-    color: rgba(34, 28, 49, 1);
-    font-family: "Noto Sans", serif;
     margin: 0;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(115, 221, 214, 1);
 }
 
-h1, h2, h3, h4, p, ul, li {
-    margin: 0;
+/* ===========
+Typography 
+============*/
+
+/* Color Palette:
+$dark blue: rgba(21, 30, 66, 1);
+$aqua: rgba(115, 221, 214, 1);
+$dark-purple rgba (34, 28, 49, 1); 
+$moonstone blue: rgba(67, 188, 211, 1);
+$vanilla: rgba(249, 235, 181, 1);
+$golden-brown: rgba(205, 176, 113, 1);
+ */
+
+h1,
+h2 {
+    font-family: "Playwrite AU SA", serif;
+    font-weight: 400;
 }
 
 h1 {
-    font-family: "Patrick Hand SC", serif;
+    color: rgba(249, 235, 181, 1);
     text-align: center;
-    color: rgba(34, 28, 49, 1);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 0.2em;
-    font-size: 4em;
+    margin: 0.5em auto;
+    font-family: "Playwrite AU SA", serif;
 }
 
-h2 {
-    color:#1b255e;
-    font-weight: 700;
-    text-shadow: 0 0 0.2em whitesmoke;
-    font-size: 3em;
+h2,
+h3,
+h4 {
+    color: rgba(205, 176, 113, 1);
 }
+
 
 h3 {
     font-weight: 700;
 }
 
-p {
-    background-color: rgb(255, 255, 255, 0.8);
-    color: rgba(34, 28, 49, 1);
-    padding: 1em;
+h4 {
+    font-style: italic;
+    font-size: 1rem;
 }
 
-ul {
-    padding: 1em;
+.h3-sidebar {
+    color: rgba(115, 221, 214, 1);
+    margin: 0;
+    margin-bottom: 1em;
 }
 
-li {
-    padding-left: 1.5em;
+.p-sidebar,
+.survey-option {
+    color: rgba(205, 176, 113, 1);
+    margin: 0;
 }
 
-/*----------- Navigation Menu------------ */
+#skills ul {
+    color: rgba(249, 235, 181, 1);
+    font-weight: 600;
+}
 
-    .nav-menu {
-        margin: 0px;
-        padding: 0px;
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 1em auto;
+}
+
+
+/* =========
+Layout
+============= */
+
+
+/* =====Nav Menu===== */
+    nav {
+        background-color: rgba(34, 28, 49, 1);
+        margin: 0;
+        padding: 0;
         width: 100%;
-        background-color: rgba(115, 221, 214, 1);
-        position: sticky;
         top: 0;
         z-index: 1;
+        position: sticky;
+        border-bottom: solid 3px rgba(205, 176, 113, 1);
     }
 
-    .nav-menu ul {
+    nav ul {
         list-style: none;
-        padding: 0px;
-        margin: 0px;
+        padding: 1em 0;
+        margin: 0;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-menu-item {
-        color:rgba(34, 28, 49, 1);
-        padding: 1em;
-        text-align: center;
+        margin: 1em;
         text-decoration: none;
-        margin: 0em;
-        float:left;
-        font-weight: 700;
+        color: rgba(115, 221, 214, 1);
     }
 
-    /* nav items change color when hovering over */
     .nav-menu-item:focus, .nav-menu-item:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-        color: rgb(139, 100, 38);
+        color: rgba(205, 176, 113, 1);
+        font-weight: 600;
     }
 
-/* ----------- About & Energy Survey Section---------- */
-    #about {
-        padding: 1.5em;
-        margin: 0;
-        margin-bottom: 1.5em;
-    }
+    .connect-logo {
+        min-width: 20px;
+        max-width: 75px;
+    } /* /==== end Nav Menu */
 
-    .about-container {
-        border:none;
-    }
-
-    .about-summary {
-        border: none;
-    }
-
-    .energy-survey {
-        text-align: center;
-        margin: 2em;
-        color: #1b255e;
-        background-color: rgba(115, 221, 214, 0.8);
-        border: none;
-        padding: 2em;
-        overflow-x: hidden;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
+.header-image {
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+    border-top: solid 6px rgba(205, 176, 113, 1);
+    border-bottom: solid 6px rgba(205, 176, 113, 1);
+    margin-bottom: 2em;
+}
 
 
-/*-------------- Experience section ------------*/
-    #experience {
-        padding: 1em;
-        margin-bottom: 1.5em;
-    }
 
-    .experience-container {
+/* =======main grid layout===== */
 
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0 70% 27% 0;
+    grid-template-areas: 
+        " . about sidebar . "
+        " . experience sidebar . "
+        " . skills sidebar . "
+        " . projects sidebar . "
+        " . connect sidebar . ";
+    grid-gap: 0.5em 0.5em;
+    padding: 0 1em;
+}
+
+.grid-item {
+    margin-bottom: 2em;
+}
+
+.grid-about {
+    grid-area: about;
+}
+
+.grid-experience {
+    grid-area: experience;
+}
+
+    /* Flex Layout for Experience Section */
+    .experience-flex {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
- 
+
     .experience-block {
-        background-color: rgba(255, 255, 255, 0.7);
-        color: rgba(34, 28, 49, 1);
-        max-width: 550px;
-        margin: 0.5em;
+        max-width: 300px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        margin: 0.7em;
+        padding: 1.5em 2em;
+        background: rgba(115, 221, 214, 0.1);
     }
 
     .date-title {
-        text-align: center;
-        max-width: 200px;
-        border: solid magenta 2px;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    .experience-title {
         margin: 0;
-        padding: 1em;
+        margin-bottom: 0.2em;
+    }
+
+    .experience-date {
+        margin: 0;
     }
 
     .job-description {
-        max-width: 300px;
+        margin: 0;
+        /* border: solid red 2px; */
+    } /* / end flex layout for Experience section */
+
+.grid-skills {
+    grid-area: skills;
+}
+
+    /* Flex Layout for Skills Section */
+    
+    #skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.5em;
+        background:rgba(205, 176, 113, 0.15);
+        border-radius: 10px;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+
+    #skills li {
         margin: 1em;
+        padding: 1em 2.5em;
+        background: rgba(205, 176, 113, 0.15);
+        border-radius: 20px;
+    }
+
+.grid-projects {
+    grid-area: projects;
+}
+
+.grid-connect {
+    grid-area: connect;
+}
+
+.connect-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.connect-logo {
+    margin: 0 0.5em;
+}
+
+/* Flex layout for sidebar */
+    .sidebar {
+        grid-area: sidebar;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: 1.5em 0 1em 0.5em;
+    }
+
+    .gis-info, .survey-container {
+        background:rgba(205, 176, 113, 0.15);
+        margin-bottom: 2em;
+        padding: 1.5em;
+    }
+
+    .survey-option {
+        margin: 0.5em;
+    }
+
+    .survey-btn {
+        margin-top: 1.2em;
+    }
+
+/* ===================
+Media Queries (largest to smallest screen size)
+====================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    body, h1 {
+        color: rgba(67, 188, 211, 1);
+    }
+
+    .nav-menu-item {
+        margin: 1em 0.5em;
+    }
+    
+    h2 {
+        color: rgba(205, 176, 113, 1);
+        margin-bottom: 0.5em;
+    }
+
+    h3, h4 {
+        color: rgba(249, 235, 181, 1);
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0.2em auto;
+    }
+
+    nav {
+        border-bottom: solid 2px rgba(249, 235, 181, 1);
+    }
+
+    nav ul {
         padding: 1em;
     }
 
-
-/*--------Skills Section--------*/
-
-#skills {
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-/*-----------Projects Sections----------*/
-#projects {
-    padding: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-/* ------------ Connect Section ----------*/
-
-    #connect {
-        padding: 1.5em;
-        margin-bottom: 1.5em;
+    .nav-menu-item, 
+    .h3-sidebar {
+       color: rgba(249, 235, 181, 1);
     }
 
-    .connect-container {
-        display: flex;
-        background-color: rgba(255, 255, 255, 0.7);
+    .nav-menu-item:focus, .nav-menu-item:hover {
+        color: rgba(67, 188, 211, 1);
+    }
+
+    .header-image {
+        border-top: solid 4px rgba(249, 235, 181, 1);
+        border-bottom: solid 4px rgba(249, 235, 181, 1);
+    }
+    
+    .container {
+        grid-template-columns: 0em auto 0em;
+        grid-template-areas: 
+            " . about . "
+            " . sidebar . "
+            " . experience . "
+            " . skills . "
+            " . projects . "
+            " . connect . ";
+    }
+
+    .sidebar {
+        margin: 0 auto;
+    }
+
+    .p-sidebar,
+    .survey-option {
+        font-weight: 400;
+    }
+
+    #skills ul {
+        padding: 1em;
+    }
+
+    #skills li {
+        margin: 0.5em;
     }
 
     .connect-logo {
         max-width: 40px;
+    }
+
+} /* /end Tablet */
+
+
+/* Phone */
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 10em;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        padding-top: 0.3em;
+        color: rgba(115, 221, 214, 1);
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin-bottom: 0.2em;
+    }
+    
+    .header-image {
+        border-top: 2px solid rgba(205, 176, 113, 1);
+        border-bottom: solid 2px rgba(205, 176, 113, 1);
+    }
+
+    .sidebar {
+        margin-top: 2em;
+    }
+
+    .survey-container,
+    .gis-info {
+        padding: 0.5em;
+    }
+
+    .h3-sidebar {
+        margin-bottom: 0.5em;
+    }
+
+    .survey-btn {
         margin: 0.5em;
     }
 
-    footer {
-        background: none;
-        text-align: center;
-    }
-
-    .author {
-        background: none;
-        color: rgba(34, 28, 49, 1);
-        text-shadow: 0 0 0.2em white;
-        font-size: 0.8em;
-    }
-
-/* ---Media Queries for Responsive Design (largest to smallest)---- */
-
-/* tablets */
-@media (max-width: 1000px) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    h1 {
-        font-size: 3em;
-        color:rgb(139, 100, 38);
-    }
-
-    h2 {
-        color: rgba(34, 28, 49, 1);
-        font-size: 2em;
-    }
-    
-    #about {
-        background:rgba(139, 100, 38, 0.7)
-    }
-
-    #experience {
-        background: rgba(34, 28, 49,0.51)
-    }
-
-    .experience-container {
+    .experience-flex {
         justify-content: center;
-        padding: 0.5em;
     }
 
-    .energy-survey {
-        margin: 1em;
-        padding: 1em;
-        font-size: 1.5em;
-    }
-}
-
-/* mobile devices */
-@media (max-width: 500px) {
-    html {
-        scroll-behavior: auto;
-        scroll-padding-top: 6em;
+    .experience-block {
+        padding: 0.8em;
     }
 
-    h1 {
-        font-size: 2em;
-        color: black;
+    #skills ul {
+        padding: 0;
     }
 
-    h2 {
-        color: rgba(34, 28, 49, 1);
-        font-size: 1.5em;
+    #skills li {
+        margin: 0.5em;
+        padding: 0.5em 1.5em;
     }
-
-    #about {
-        background:rgba(34, 28, 49,0.51);
-    }
-
-    #experience {
-        background: rgba(139, 100, 38, 0.7);
-    }
-
-    .experience-container {
-        justify-content: center;
-        padding: 0.5em;
-    }
-
-    .energy-survey {
-        margin: 1em;
-        padding: 0.5em;
-        font-size: 1em;
-    }
-}
+}; /* / end Phone */
 
 
+/* ================
+ GOALS/Bugs
+ ================= -->
+
+ <!-- 
+ - can't get gitbash to work, have to use terminal
+ - At tablet size, justify-content isn't working for the flexbox - and why is my name not on one line
+ - Putting the nav and h1 in a div broke the stickiness of the nav bar
+ - When shrunk or when font increased to 2rem (for accessibility), the experience section and the Survey-container overlap. Also the font size didn't change on everything
+ - Wasn't able to add a picture bullet to the skills section
+ - Job-descriptions in experience blocks of experience section aren't changing width
+ - couldn't figure out how to get a class name to work in js and then use it in css
+
+ Goal: make hamburger menu for phone screen-size and change "Valerie Newton" to "VN" kind of like a logo (make it as a li item of the nav ul?)
+ Goal: Make a chart of some sort so that when you submit the energy survey, it posts everyone's answers right below it
+ Goal: Change connect logos so they are all one color
+ Goal: Toggle between light/dark color scheme
+ */

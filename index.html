@@ -1,143 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="keywords" content="Geographic Information Systems, GIS, Renewable Energy, Solar, Solar Energy, Javascript, HTML, CSS, Python">
-        <meta name="author" content="Valerie Newton">
-        <meta name="description" content="Valerie Newton's resume, experience, and contact links">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/index.css" rel="stylesheet">
-        <title>Valerie Newton's Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Patrick+Hand+SC&display=swap" rel="stylesheet">
-        <style>
-            body {
-                background-image: url("img/ocean-view.jpg");
-                background-size: cover;
-                background-attachment: fixed;
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Geographic Information Systems, GIS, Renewable Energy, Solar, Solar Energy, Javascript, HTML, CSS, Python">
+    <meta name="author" content="Valerie Newton">
+    <meta name="description" content="Valerie Newton's resume, experience, and contact links">
+    <title>Valerie Newton's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
 
-    <body>
-        <!-- Navigation Menu -->
-        <nav class="nav-menu">
+<body>
+
+        <nav>
             <ul>
-                <li><a href="#about" class="nav-menu-item active">About</a></li>
+                <li><a href="#about" class="nav-menu-item">About</a></li>
                 <li><a href="#experience" class="nav-menu-item">Experience</a></li>
                 <li><a href="#skills" class="nav-menu-item">Skills</a></li>
                 <li><a href="#projects" class="nav-menu-item">Projects</a></li>
                 <li><a href="#connect" class="nav-menu-item">Connect</a></li>
             </ul>
         </nav>
-        
-        <!-- About Section & Energy Survey -->
-        <h1>Valerie Newton</h1>
 
-        <section id="about">
+        <header>
+            <h1>Valerie Newton</h1>
+        </header>
+
+    <img class="header-image" src="img/ocean-view.jpg" alt="aerial map of a dark blue ocean with rocky land">
+
+    <div class="container">
+
+        <!-- ============
+         About Section
+         =========== -->
+        <section class="grid-item grid-about" id="about">
             <h2>About</h2>
-            <div class="about-container">
-                <div class="about-summary">
-                    <p>Detail-oriented GIS professional with expertise in spatial data analysis, programming, and renewable energy project development. Proficient in multiple GIS tools with a commitment to continuously enhancing my skills through both classes and hands-on experience. Currently expanding my technical capabilities in programming by taking courses in Javascript, HTML, and CSS. Eagerly seeking an opportunity to apply my spatial analysis and programming skills to support decision-making and drive innovation in the environmental sector.</p>
-                </div>
-            </div> <!-- / end about-container-->
+            <p>Detail-oriented GIS professional with expertise in spatial data analysis, programming, and renewable energy project development. Proficient in multiple GIS tools with a commitment to continuously enhancing my skills through both classes and hands-on experience. Currently expanding my technical capabilities in programming by taking courses in Javascript, HTML, and CSS.</p>
+        </section> <!-- / About section -->
 
-            <div class="survey-container">
-                <form class="energy-survey" action="/action_page.php" method="post">
-                    <label for="renewable_energy">What type of renewable energy interests you most?</label>
-                    <select name="renewable_energy_dropdown">
-                        <option value="solar">Solar</option>
-                        <option value="wind">Wind</option>
-                        <option value="hydro">Hydro</option>
-                        <option value="geothermal">Geothermal</option>
-                        <option value="ocean">Ocean</option>
-                        <option value="hydrogen">Hydrogen</option>
-                        <option value="biomass">Biomass</option>
-                        <option value="unsure">I'm not sure!</option>
-                    </select>
-                    <button type="submit">Submit</button>
-                </form>
+        <!-- ======================
+         GIS Info & Energy Survey
+         ========================= -->
+        <section class="sidebar">
+
+            <!-- GIS Info -->
+            <div class="grid-item gis-info">
+                <h3 class="h3-sidebar">What is GIS?</h3>
+                <p class="p-sidebar">GIS stands for Geographical Information Systems, which are systems that analyze, manipulate, and and visualize any location-based data.</p>
             </div>
-        </section> <!-- / end About & Energy Survey section -->
 
-        <!-- Experience Section -->
-        <section id="experience">
-        <h2>Experience</h2>
-            <div class="experience-container">
+            <!-- Energy Survey -->
+            <div class="grid-item survey-container">
+                <form class="energy-survey grid-energy-survey" action="/action_page.php" method="post">
+                    <label for="renewable_energy"><h3 class="h3-sidebar">What type of renewable energy interests you most?</h3></label>
+                    <div class="survey-option">
+                        <input type="radio" id="solar" name="energy_interest" value="solar">
+                        <label for="solar">Solar</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="wind" name="energy_interest" value="wind">
+                        <label for="wind">Wind</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="hydro" name="energy_interest" value="hydro">
+                        <label for="hydro">Hydro</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="geothermal" name="energy_interest" value="geothermal">
+                        <label for="geothermal">Geothermal</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="ocean" name="energy_interest" value="ocean">
+                        <label for="ocean">Ocean</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="hydrogen" name="energy_interest" value="hydrogen">
+                        <label for="hydrogen">Hydrogen</label>
+                    </div>
+                    <div class="survey-option">
+                        <input type="radio" id="biomass" name="energy_interest" value="biomass">
+                        <label for="biomass">Biomass</label>
+                    </div>
+                    <button type="submit" class="survey-btn">Submit</button>
+                </form>
+            </div> <!-- / Energy Survey -->
 
+        </section> <!-- / Sidebar -->
+
+
+
+        <!-- ===============
+         Experience Section
+         ================= -->
+
+        <section class="grid-item grid-experience" id="experience">
+            <h2>Experience</h2>
+            <div class="experience-flex">
                 <div class="experience-block">
                     <div class="date-title">
-                        <h3>GIS Analyst</h3>
-                        <h4>Feb 2023 - Jan 2024</h4>
+                        <h3 class="experience-title">GIS Analyst</h3>
+                        <h4 class="experience-date">Feb 2023 - Jan 2024</h4>
                     </div>
                     <p class="job-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam eveniet rerum minima impedit facere voluptas voluptates voluptatibus soluta quo eligendi, repellendus dolorem! Maiores culpa consequuntur beatae? Facere nesciunt in quaerat?</p>
                 </div> <!-- / end experience-block -->
 
                 <div class="experience-block">
                     <div class="date-title">
-                        <h3>Natural Resources Technician</h3>
-                        <h4>Oct 2022 - Feb 2023</h4>
+                        <h3 class="experience-title">Natural Resources Technician</h3>
+                        <h4 class="experience-date">Oct 2022 - Feb 2023</h4>
                     </div>
                         <p class="job-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam labore explicabo hic, debitis voluptatibus reprehenderit fugit, atque quod, quo rem cum? Hic quas facilis officiis accusamus ducimus? Cupiditate, voluptate qui!</p>
-                 </div> <!-- / end experience-block -->
+                </div> <!-- / end experience-block -->
 
                 <div class="experience-block">
                     <div class="date-title">
-                        <h3>Renewable Energy Intern</h3>
-                        <h4>Jul 2022 - Oct 2022</h4>
-                    </div>
+                        <h3  class="experience-title">Renewable Energy Intern</h3>
+                        <h4 class="experience-date">Jul 2022 - Oct 2022</h4>
+                </div>
                     <p class="job-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam labore explicabo hic, debitis voluptatibus reprehenderit fugit, atque quod, quo rem cum? Hic quas facilis officiis accusamus ducimus? Cupiditate, voluptate qui!</p>
                 </div> <!-- / end experience-block -->
 
                 <div class="experience-block">
                     <div class="date-title">
-                        <h3>Audience Services Associate</h3>
-                        <h4>Nov 2019 - May 2022</h4>
+                        <h3 class="experience-title">Audience Services Associate</h3>
+                        <h4 class="experience-date">Nov 2019 - May 2022</h4>
                     </div>
                     <p class="job-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, repudiandae delectus qui facilis optio at. Id, tempore voluptates, labore repellendus dolore, unde provident facere soluta animi architecto ullam vero optio?</p>
                 </div> <!-- / end experience-block -->
 
                 <div class="experience-block">
                     <div class="date-title">
-                        <h3>Project Manager & Medical Assistant</h3>
-                        <h4>Dec 2015 - Apr 2019</h4>
+                        <h3 class="experience-title">Project Manager & Medical Assistant</h3>
+                        <h4 class="experience-date">Dec 2015 - Apr 2019</h4>
                     </div>
                     <p class="job-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia delectus maiores tempore molestiae eligendi excepturi fugiat adipisci repudiandae fuga reiciendis provident dolor recusandae vero sed vitae, libero consectetur laboriosam asperiores!</p>
                 </div> <!-- / end experience-block -->
+            </div>
+        </section> <!-- / Experience section -->
 
-            </div> <!-- / end experience-container -->
-        </section> <!-- / end Experience section -->
 
-        <section id="skills">
+
+        <!-- ===========
+         Skills Section
+         ============ -->
+        <section class="grid-item grid-skills" id="skills">
             <h2>Skills</h2>
-        </section>
+            <ul></ul>
+        </section> <!-- / Skills section -->
 
-        <section id="projects">
+
+
+        <!-- ==============
+         Projects Section
+         =============== -->
+        <section class="grid-item grid-projects" id="projects">
             <h2>Projects</h2>
-                <ul>
-                </ul>
-        </section>
+            <ul></ul>
+        </section> <!-- / Projects section -->
 
-        <section id="connect">
+
+        
+        <!-- =============
+         Connect Section
+         ============== -->
+        <section class="grid-item grid-connect" id="connect">
             <h2>Connect</h2>
                 <div class="connect-container">
-                    <div><a href="https://www.linkedin.com/in/valerie-newton-a250879b/"><img src="img/linkedin-logo-short.png" alt="LinkedIn Logo" class="connect-logo"></a></div>
-                    <div><a href="https://github.com/vnewto"><image src="img/github-logo.png" alt="Github Logo" class="connect-logo"></a></div>
-                    <div>
-                        <form action="/action_page.php" method="post">
-                            <label for="message">Send me a message!</label>
-                            <textarea rows="5" columns="25" placeholder="Type your message here"></textarea>
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>
-                </div>
+                    <a href="https://www.linkedin.com/in/valerie-newton-a250879b/"><img src="img/linkedin-logo-short.png" alt="LinkedIn Logo" class="connect-logo"></a>
+                    <a href="https://github.com/vnewto"><image src="img/github-logo.png" alt="Github Logo" class="connect-logo"></a>
+                </div>    
         </section>
+    </div>
 
-    <footer>
-        <p class="author">Valerie Newton 2025</p>
-        <a href="experiment.html">experiment page</a>
-    </footer>
+    <!-- Link to JavaScript File -->
+    <script src="js/index.js"></script>
 
-    </body>
+</body>
+
 </html>
+
