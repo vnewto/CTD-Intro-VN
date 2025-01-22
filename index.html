@@ -84,7 +84,7 @@
                         <input type="radio" id="biomass" name="energy_interest" value="biomass">
                         <label for="biomass">Biomass</label>
                     </div>
-                    <button type="submit" class="survey-btn">Submit</button>
+                    <button type="submit" class="survey-btn submit-btn">Submit</button>
                 </form>
             </div> <!-- / Energy Survey -->
 
@@ -183,21 +183,24 @@
          <!-- Message Form -->
         <section id="message" class="grid-item grid-message-form">
             <h2>Leave a Message</h2>
-            <form name="leave_message">
+            <form name="leave_message" class="leave-message">
                 <!-- Name -->
-                <label for="usersName">Name</label>
-                <input type="text" id="usersName" name="usersName" required="true">
+                <label for="usersName">Name:</label>
+                <br>
+                <input type="text" id="usersName" name="usersName" required="true" class="message-input">
                 <br>
                 <!-- Email -->
-                <label for="usersEmail">Email</label>
-                <input type="email" id="usersEmail" name="usersEmail" required="true">
+                <label for="usersEmail">Email:</label>
+                <br>
+                <input type="email" id="usersEmail" name="usersEmail" required="true" class="message-input">
                 <br>
                 <!-- Message -->
-                <label for="usersMessage">Message</label>
-                <textarea name="usersMessage" id="usersMessage" required="true"></textarea>
+                <label for="usersMessage">Message:</label>
+                <br>
+                <textarea name="usersMessage" id="usersMessage" required="true" class="message-input"></textarea>
                 <br>
                 <!-- Submit Button -->
-                <button type="submit">Submit</button>
+                <button type="submit" class="submit-btn message-btn">Submit</button>
             </form>
         </section>
 

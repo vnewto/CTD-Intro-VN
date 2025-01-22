@@ -55,7 +55,7 @@ function handleSubmit(event) {
     let messageSection = document.querySelector("#messages");
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    newMessage.innerHTML = <a>${usersName}</a> + <span>${usersMessage}</span>;
+    newMessage.innerHTML = `<a href="mailto:usersEmail">${usersName}</a> <br> <span>${usersMessage}</span>`;
 
     //create remove & edit buttons
     const removeButton = document.createElement("button");
@@ -63,19 +63,23 @@ function handleSubmit(event) {
     removeButton.type = "button";
     removeButton.addEventListener("click", handleRemove);
     function handleRemove(event) {
-        let entry = event.currentTarget.parentNode.nodeName;
+        let entry = event.currentTarget.parentNode;
         entry.remove();
     }
+
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.type = "button";
+    editButton.addEventListener("click", handleEdit);
+    function handleEdit(event) {
+        newMessage.contentEditable = true;
+    }
+
+    newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
-    // const editButton = document.createElement("button");
-    // editButton.textContent = "Edit";
-    // editButton.type = "button";
-    // editButton.addEventListener("click", handleEdit);
-    // function handleEdit(event) {
-    //     let messageText = 
-    // }
+    
 
     //clear form after use
     messageForm.reset();

@@ -75,10 +75,19 @@ h4 {
     font-weight: 600;
 }
 
+#skills li {
+    text-align: center;
+}
+
 footer {
     text-align: center;
     font-size: 0.9rem;
     margin: 1em auto;
+}
+
+button {
+    font-family: "Lato", serif;
+    font-weight: 600;
 }
 
 
@@ -163,9 +172,28 @@ Layout
     grid-area: about;
 }
 
+/* Flex layout for sidebar */
+.sidebar {
+    grid-area: sidebar;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0 1em 0.5em;
+}
+
+.gis-info, .survey-container {
+    background:rgba(205, 176, 113, 0.15);
+    margin-bottom: 2em;
+    padding: 1.5em;
+}
+
+.survey-option {
+    margin: 0.5em;
+} /* / end sidebar section */
+
 .grid-experience {
     grid-area: experience;
-}
+}  
 
     /* Flex Layout for Experience Section */
     .experience-flex {
@@ -245,32 +273,80 @@ Layout
     grid-area: message-form;
 }
 
+.leave-message {
+    padding-left: 0.5em;
+}
+
+.message-input {
+    margin: 0.8em auto 1.5em;
+    width: 75%;
+    padding: 0.5em;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgb(182, 200, 204);
+}
+
 .grid-message-board {
     grid-area: message-board;
 }
 
-/* Flex layout for sidebar */
-    .sidebar {
-        grid-area: sidebar;
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin: 1.5em 0 1em 0.5em;
-    }
+#messages ul {
+    background: rgba(205, 176, 113, 0.15);
+    padding: 1.5em;
+    list-style: none;
+}
 
-    .gis-info, .survey-container {
-        background:rgba(205, 176, 113, 0.15);
-        margin-bottom: 2em;
-        padding: 1.5em;
-    }
+#messages li {
+    color: rgba(249, 235, 181, 1);
+    padding: 1em;
+    background: rgba(205, 176, 113, 0.15);
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+}
 
-    .survey-option {
-        margin: 0.5em;
-    }
+#messages li:last-child {
+    margin-bottom: 0;
+}
 
-    .survey-btn {
-        margin-top: 1.2em;
-    }
+#messages a {
+    color: rgba(115, 221, 214, 1);
+    font-weight: 600;
+}
+
+
+
+/* ===========
+Buttons
+============= */
+button {
+    color:rgba(34, 28, 49, 1);
+    background: rgba(249, 235, 181, 1);
+    border: none;
+    padding: 0.5em 1.5em;
+}
+
+.survey-btn {
+    margin-top: 1.2em;
+}
+
+.message-btn {
+    margin-bottom: 1.5em;
+}
+
+#messages button {
+    display: inline-block;
+    margin: 0 1em;
+    font-size: 0.8rem;
+}
+
+button:focus,
+button:hover {
+    background: rgba(205, 176, 113, 1);
+} /* /end Buttons */
+
+
 
 /* ===================
 Media Queries (largest to smallest screen size)
@@ -360,6 +436,10 @@ Media Queries (largest to smallest screen size)
         max-width: 40px;
     }
 
+    .message-input {
+        width: 85%;
+    }
+
 } /* /end Tablet */
 
 
@@ -429,6 +509,16 @@ Media Queries (largest to smallest screen size)
     #skills li {
         margin: 0.5em;
         padding: 0.5em 1.5em;
+    }
+
+    .message-input {
+        width: 95%;
+    }
+
+    #messages button {
+        display: block;
+        margin: 1em 0 0 0;
+        font-size: 0.8rem;
     }
 }; /* / end Phone */
 
