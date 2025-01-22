@@ -75,7 +75,7 @@ function handleSubmit(event) {
         let editableText = newMessage.querySelector("span");
         console.log(editableText);
         editableText.contentEditable = true;
-        editableText.style.backgroundColor = rgba(205, 176, 113, 1);
+        editableText.style.backgroundColor ="rgba(205, 176, 113, 1)";
     }
 
     newMessage.appendChild(editButton);
