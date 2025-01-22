@@ -55,7 +55,7 @@ function handleSubmit(event) {
     let messageSection = document.querySelector("#messages");
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    newMessage.innerHTML = `<a href="mailto:usersEmail">${usersName}</a> <br> <span>${usersMessage}</span>`;
+    newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> <br> <span>${usersMessage}</span>`;
 
     //create remove & edit buttons
     const removeButton = document.createElement("button");
@@ -79,6 +79,13 @@ function handleSubmit(event) {
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
+
+    //hide message section if no messages
+    if(messageList = "") {
+        messageList.hidden = true;
+    } else {
+        messageList.hidden = false;
+    }
     
 
     //clear form after use
