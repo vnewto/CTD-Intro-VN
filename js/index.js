@@ -72,7 +72,10 @@ function handleSubmit(event) {
     editButton.type = "button";
     editButton.addEventListener("click", handleEdit);
     function handleEdit(event) {
-        newMessage.contentEditable = true;
+        let editableText = newMessage.querySelector("span");
+        console.log(editableText);
+        editableText.contentEditable = true;
+        editableText.style.backgroundColor = rgba(205, 176, 113, 1);
     }
 
     newMessage.appendChild(editButton);
@@ -81,10 +84,10 @@ function handleSubmit(event) {
 
 
     //hide message section if no messages
-    if(messageList = "") {
-        messageList.hidden = true;
+    if(messageList.children.length === 0) {
+        messageSection.hidden = true;
     } else {
-        messageList.hidden = false;
+        messageSection.hidden = false;
     }
     
 

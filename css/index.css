@@ -273,6 +273,8 @@ Layout
     grid-area: message-form;
 }
 
+
+/* Messages Form */
 .leave-message {
     padding-left: 0.5em;
 }
@@ -286,8 +288,10 @@ Layout
 input:focus,
 textarea:focus {
     background-color: rgb(182, 200, 204);
-}
+} /* /end Messages Section */
 
+
+/* Message Board */
 .grid-message-board {
     grid-area: message-board;
 }
@@ -313,7 +317,14 @@ textarea:focus {
 #messages a {
     color: rgba(115, 221, 214, 1);
     font-weight: 600;
+    text-decoration: none;
 }
+
+#messages a:focus,
+#messages a:hover {
+    color: rgba(205, 176, 113, 1);
+    text-decoration: underline;
+} /* / end Message Board section */
 
 
 
@@ -337,7 +348,7 @@ button {
 
 #messages button {
     display: inline-block;
-    margin: 0 1em;
+    margin: 0 0 0 1.5em;
     font-size: 0.8rem;
 }
 
@@ -513,6 +524,10 @@ Media Queries (largest to smallest screen size)
 
     .message-input {
         width: 95%;
+    }
+
+    #messages ul {
+        padding: 1em;
     }
 
     #messages button {
