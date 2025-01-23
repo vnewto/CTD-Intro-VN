@@ -1,4 +1,3 @@
-
 //create alert for survey button
 const surveyBtn = document.querySelector(".survey-btn");
 function alertThanks() {
@@ -52,7 +51,7 @@ function handleSubmit(event) {
     console.log(usersName, usersEmail, usersMessage);
 
     //create variables to display messages
-    let messageSection = document.querySelector("#messages");
+    let messageSection = document.querySelector("#messageboard");
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
     newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a> <br> <span>${usersMessage}</span>`;
@@ -81,17 +80,18 @@ function handleSubmit(event) {
     newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-
-
-    //hide message section if no messages
-    if(messageList.children.length === 0) {
-        messageSection.hidden = true;
-    } else {
-        messageSection.hidden = false;
-    }
     
 
     //clear form after use
     messageForm.reset();
 }
+
+//hide message section if no messages
+let messageBoard = document.querySelector("#messageboard");
+let messagesList = messageBoard.querySelector("ul");
+let numMessages = messagesList.children.length;
+
+if(numMessages === 0) {
+    messageBoard.hidden = true;
+    };
 

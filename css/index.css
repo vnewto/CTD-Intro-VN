@@ -297,13 +297,13 @@ textarea:focus {
     grid-area: message-board;
 }
 
-#messages ul {
+#messageboard ul {
     background: rgba(205, 176, 113, 0.15);
     padding: 1.5em;
     list-style: none;
 }
 
-#messages li {
+#messageboard li {
     color: rgba(249, 235, 181, 1);
     padding: 1em;
     background: rgba(205, 176, 113, 0.15);
@@ -311,18 +311,18 @@ textarea:focus {
     border-radius: 5px;
 }
 
-#messages li:last-child {
+#messageboard li:last-child {
     margin-bottom: 0;
 }
 
-#messages a {
+#messageboard a {
     color: rgba(115, 221, 214, 1);
     font-weight: 600;
     text-decoration: none;
 }
 
-#messages a:focus,
-#messages a:hover {
+#messageboard a:focus,
+#messageboard a:hover {
     color: rgba(205, 176, 113, 1);
     text-decoration: underline;
 } /* / end Message Board Section */
@@ -347,7 +347,7 @@ button {
     margin-bottom: 1.5em;
 }
 
-#messages button {
+#messageboard button {
     display: inline-block;
     margin: 0 0 0 1.5em;
     font-size: 0.8rem;
@@ -523,11 +523,11 @@ Media Queries (largest to smallest screen size)
         width: 95%;
     }
 
-    #messages ul {
+    #messageboard ul {
         padding: 1em;
     }
 
-    #messages button {
+    #messageboard button {
         display: block;
         margin: 1em 0 0 0;
         font-size: 0.8rem;
