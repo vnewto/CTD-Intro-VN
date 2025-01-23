@@ -75,10 +75,19 @@ h4 {
     font-weight: 600;
 }
 
+#skills li {
+    text-align: center;
+}
+
 footer {
     text-align: center;
     font-size: 0.9rem;
     margin: 1em auto;
+}
+
+button {
+    font-family: "Lato", serif;
+    font-weight: 600;
 }
 
 
@@ -118,11 +127,6 @@ Layout
     .nav-menu-item:focus, .nav-menu-item:hover {
         color: rgba(205, 176, 113, 1);
         font-weight: 600;
-    }
-
-    .connect-logo {
-        min-width: 20px;
-        max-width: 75px;
     } /* /==== end Nav Menu */
 
 .header-image {
@@ -148,7 +152,9 @@ Layout
         " . experience sidebar . "
         " . skills sidebar . "
         " . projects sidebar . "
-        " . connect sidebar . ";
+        " . connect sidebar . "
+        " . message-form sidebar . "
+        " . message-board sidebar . ";
     grid-gap: 0.5em 0.5em;
     padding: 0 1em;
 }
@@ -161,9 +167,28 @@ Layout
     grid-area: about;
 }
 
+/* Flex layout for sidebar */
+.sidebar {
+    grid-area: sidebar;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0 1em 0.5em;
+}
+
+.gis-info, .survey-container {
+    background:rgba(205, 176, 113, 0.15);
+    margin-bottom: 2em;
+    padding: 1.5em;
+}
+
+.survey-option {
+    margin: 0.5em;
+} /* / end sidebar section */
+
 .grid-experience {
     grid-area: experience;
-}
+}  
 
     /* Flex Layout for Experience Section */
     .experience-flex {
@@ -197,7 +222,6 @@ Layout
 
     .job-description {
         margin: 0;
-        /* border: solid red 2px; */
     } /* / end flex layout for Experience section */
 
 .grid-skills {
@@ -234,34 +258,107 @@ Layout
 .connect-container {
     display: flex;
     justify-content: flex-start;
+    max-height: 50px;
 }
 
 .connect-logo {
-    margin: 0 0.5em;
+    margin: 0;
+    object-fit: cover;
+    height: 100%;
+    min-width: 20px;
+    max-width: 75px;
+    border-radius: 5px;
 }
 
-/* Flex layout for sidebar */
-    .sidebar {
-        grid-area: sidebar;
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        margin: 1.5em 0 1em 0.5em;
-    }
+.grid-message-form {
+    grid-area: message-form;
+}
 
-    .gis-info, .survey-container {
-        background:rgba(205, 176, 113, 0.15);
-        margin-bottom: 2em;
-        padding: 1.5em;
-    }
 
-    .survey-option {
-        margin: 0.5em;
-    }
+/* Messages Form */
+.leave-message {
+    padding-left: 0.5em;
+}
 
-    .survey-btn {
-        margin-top: 1.2em;
-    }
+.message-input {
+    margin: 0.8em auto 1.5em;
+    width: 75%;
+    padding: 0.5em;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgb(182, 200, 204);
+} /* /end Messages Section */
+
+
+/* Message Board */
+.grid-message-board {
+    grid-area: message-board;
+}
+
+#messageboard ul {
+    background: rgba(205, 176, 113, 0.15);
+    padding: 1.5em;
+    list-style: none;
+}
+
+#messageboard li {
+    color: rgba(249, 235, 181, 1);
+    padding: 1em;
+    background: rgba(205, 176, 113, 0.15);
+    margin-bottom: 1.5em;
+    border-radius: 5px;
+}
+
+#messageboard li:last-child {
+    margin-bottom: 0;
+}
+
+#messageboard a {
+    color: rgba(115, 221, 214, 1);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#messageboard a:focus,
+#messageboard a:hover {
+    color: rgba(205, 176, 113, 1);
+    text-decoration: underline;
+} /* / end Message Board Section */
+
+
+
+/* ===========
+Buttons
+============= */
+button {
+    color:rgba(34, 28, 49, 1);
+    background: rgba(249, 235, 181, 1);
+    border: none;
+    padding: 0.5em 1.5em;
+}
+
+.survey-btn {
+    margin-top: 1.2em;
+}
+
+.message-btn {
+    margin-bottom: 1.5em;
+}
+
+#messageboard button {
+    display: inline-block;
+    margin: 0 0 0 1.5em;
+    font-size: 0.8rem;
+}
+
+button:focus,
+button:hover {
+    background: rgba(205, 176, 113, 1);
+} /* /end Buttons */
+
+
 
 /* ===================
 Media Queries (largest to smallest screen size)
@@ -325,7 +422,9 @@ Media Queries (largest to smallest screen size)
             " . experience . "
             " . skills . "
             " . projects . "
-            " . connect . ";
+            " . connect . "
+            " . message-form ."
+            " . message-board . ";
     }
 
     .sidebar {
@@ -345,8 +444,8 @@ Media Queries (largest to smallest screen size)
         margin: 0.5em;
     }
 
-    .connect-logo {
-        max-width: 40px;
+    .message-input {
+        width: 85%;
     }
 
 } /* /end Tablet */
@@ -363,18 +462,27 @@ Media Queries (largest to smallest screen size)
         padding-top: 0.3em;
         color: rgba(115, 221, 214, 1);
     }
+
+    nav {
+        border-bottom: solid 2px rgba(205, 176, 113, 1);
+    }
     
     nav ul {
         flex-direction: column;
+        padding: 0.2em;
     }
 
     nav li {
-        margin-bottom: 0.2em;
+        margin-bottom: 0.3em;
     }
     
     .header-image {
         border-top: 2px solid rgba(205, 176, 113, 1);
         border-bottom: solid 2px rgba(205, 176, 113, 1);
+    }
+
+    .container {
+        padding: 0.2em;
     }
 
     .sidebar {
@@ -410,6 +518,20 @@ Media Queries (largest to smallest screen size)
         margin: 0.5em;
         padding: 0.5em 1.5em;
     }
+
+    .message-input {
+        width: 95%;
+    }
+
+    #messageboard ul {
+        padding: 1em;
+    }
+
+    #messageboard button {
+        display: block;
+        margin: 1em 0 0 0;
+        font-size: 0.8rem;
+    }
 }; /* / end Phone */
 
 
@@ -419,12 +541,7 @@ Media Queries (largest to smallest screen size)
 
  <!-- 
  - can't get gitbash to work, have to use terminal
- - At tablet size, justify-content isn't working for the flexbox - and why is my name not on one line
- - Putting the nav and h1 in a div broke the stickiness of the nav bar
- - When shrunk or when font increased to 2rem (for accessibility), the experience section and the Survey-container overlap. Also the font size didn't change on everything
  - Wasn't able to add a picture bullet to the skills section
- - Job-descriptions in experience blocks of experience section aren't changing width
- - couldn't figure out how to get a class name to work in js and then use it in css
 
  Goal: make hamburger menu for phone screen-size and change "Valerie Newton" to "VN" kind of like a logo (make it as a li item of the nav ul?)
  Goal: Make a chart of some sort so that when you submit the energy survey, it posts everyone's answers right below it
