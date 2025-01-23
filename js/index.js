@@ -40,6 +40,17 @@ footer.appendChild(copyright);
 const messageForm = document.forms["leave_message"];
 messageForm.addEventListener("submit", handleSubmit);
 
+
+//hide message section if no messages
+let messageBoard = document.querySelector("#messageboard");
+let messagesList = messageBoard.querySelector("ul");
+let numMessages = messagesList.children.length;
+
+if(numMessages === 0) {
+    messageBoard.hidden = true;
+    };
+
+
 function handleSubmit(event) {
     //prevent page from refreshing upon form submission
     event.preventDefault();
@@ -80,18 +91,13 @@ function handleSubmit(event) {
     newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
+
+    //unhide message board
+    messageBoard.hidden = false;
     
 
     //clear form after use
     messageForm.reset();
 }
 
-//hide message section if no messages
-let messageBoard = document.querySelector("#messageboard");
-let messagesList = messageBoard.querySelector("ul");
-let numMessages = messagesList.children.length;
-
-if(numMessages === 0) {
-    messageBoard.hidden = true;
-    };
 
