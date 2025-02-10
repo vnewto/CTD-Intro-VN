@@ -18,7 +18,7 @@ const body = document.querySelector("body");
 body.appendChild(footer);
 
 
-// //Insert copyright text into footer
+//Insert copyright text into footer
 let today = new Date();
 const thisYear = today.getFullYear();
 
@@ -37,7 +37,7 @@ messageForm.addEventListener("submit", handleSubmit);
 let messageBoard = document.querySelector("#messageboard");
 messageBoard.hidden = true;
 
-
+//add message to message board upon form submission
 function handleSubmit(event) {
     //prevent page from refreshing upon form submission
     event.preventDefault();
