@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/88de86cf7d.js" crossorigin="anonymous"></script>
     <link href="css/index.css" rel="stylesheet">
 </head>
 
@@ -54,7 +55,7 @@
 
             <!-- Energy Survey -->
             <div class="grid-item survey-container">
-                <form class="energy-survey grid-energy-survey" action="/action_page.php" method="post">
+                <form name="energy_survey" class="energy-survey grid-energy-survey">
                     <h3 class="h3-sidebar">What type of renewable energy interests you most?</h3>
                     <div class="survey-option">
                         <input type="radio" id="solar" name="energy_interest" value="solar">
@@ -169,10 +170,17 @@
          ============== -->
         <section class="grid-item grid-connect" id="connect">
             <h2>Connect</h2>
-                <div class="connect-container">
-                    <a href="https://www.linkedin.com/in/valerie-newton-a250879b/" class="logo-link"><img src="img/linkedin-logo-png.png" alt="LinkedIn Logo" class="connect-logo"></a>
-                    <a href="https://github.com/vnewto" class="logo-link"><image src="img/github-icon.jpg" alt="Github Logo" class="connect-logo"></a>
-                </div>    
+                <ul class="connect-li">
+                    <li>
+                        <a href="https://www.linkedin.com/in/valerie-newton-a250879b/" class="logo-link"><i class="fa-brands fa-linkedin connect-logo"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/vnewto" class="logo-link"><i class="fa-brands fa-github connect-logo"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:valerie.newton16@gmail.com" class="logo-link"><i class="fa-solid fa-envelope connect-logo"></i></a>
+                    </li>
+                </ul>   
         </section>
 
 

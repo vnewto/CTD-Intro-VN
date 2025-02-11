@@ -66,8 +66,18 @@ h4 {
 
 .p-sidebar,
 .survey-option {
-    color: rgba(205, 176, 113, 1);
+    color: rgba(249, 235, 181, 1);
     margin: 0;
+}
+
+.p-sidebar a {
+    color: rgba(115, 221, 214, 1);
+}
+
+.p-sidebar a:focus,
+.p-sidebar a:hover {
+    color: rgba(205, 176, 113, 1);
+    font-weight: 600;
 }
 
 #skills ul {
@@ -77,6 +87,10 @@ h4 {
 
 #skills li {
     text-align: center;
+}
+
+#projects a {
+    color: rgba(115, 221, 214, 1);
 }
 
 footer {
@@ -251,31 +265,70 @@ Layout
     grid-area: projects;
 }
 
+    /* Projects flex container */
+    #projects ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        margin-top: 1em;
+        padding-left: 0.5em;
+    }
+
+    #projects li {
+        margin: 1em 0;
+    }
+
+
+    #projects a {
+        padding: 1em 2em;
+        background: rgba(115, 221, 214, 0.1);
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(115, 221, 214, 0.5);
+    }
+
+    #projects a:focus,
+    #projects a:hover {
+        color: rgba(249, 235, 181, 1);
+        background: rgba(115, 221, 214, 0.3);
+        box-shadow: 0 0 8px 0 rgba(249, 235, 181, 1);
+    }
+
+/* Connect Section */
 .grid-connect {
     grid-area: connect;
 }
 
-.connect-container {
+#connect h2 {
+    margin-bottom: 0;
+}
+
+.connect-li {
     display: flex;
-    justify-content: flex-start;
-    max-height: 50px;
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
 }
 
 .connect-logo {
-    margin: 0;
-    object-fit: cover;
-    height: 100%;
-    min-width: 20px;
-    max-width: 75px;
-    border-radius: 5px;
-}
+    color: rgba(249, 235, 181, 1);
+    padding: 0.3em;
+    font-size: 2.5rem;
+} 
 
+.connect-logo:focus,
+.connect-logo:hover {
+    opacity: 0.4;
+} /* /end Connect section */
+
+
+
+/* Messages Form */
 .grid-message-form {
     grid-area: message-form;
 }
 
-
-/* Messages Form */
 .leave-message {
     padding-left: 0.5em;
 }
@@ -434,6 +487,7 @@ Media Queries (largest to smallest screen size)
     .p-sidebar,
     .survey-option {
         font-weight: 400;
+        color: rgba(205, 176, 113, 1);
     }
 
     #skills ul {
@@ -442,6 +496,10 @@ Media Queries (largest to smallest screen size)
 
     #skills li {
         margin: 0.5em;
+    }
+
+    #projects a {
+        color: rgba(67, 188, 211, 1);
     }
 
     .message-input {
@@ -545,6 +603,5 @@ Media Queries (largest to smallest screen size)
 
  Goal: make hamburger menu for phone screen-size and change "Valerie Newton" to "VN" kind of like a logo (make it as a li item of the nav ul?)
  Goal: Make a chart of some sort so that when you submit the energy survey, it posts everyone's answers right below it
- Goal: Change connect logos so they are all one color
  Goal: Toggle between light/dark color scheme
  */
